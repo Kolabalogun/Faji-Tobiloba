@@ -29,7 +29,7 @@ const Footer = () => {
             </div>
 
             <p className='text-white my-8 font-rubik'>The Faji Tobiloba</p>
-            <a href='https://ibrahimkolabalogun.web.app/' className='text-white mt-8 font-rubik mb-[-60px] text-[14px]'>Developed by <span className='text-blue-600'>Ibrahim</span> </a>
+            <a href='https://ibrahimkolabalogun.web.app/' className='text-white mt-8 font-rubik mb-[-60px] text-[13px]'>Developed by <span className='text-blue-300'>Ibrahim</span> </a>
 
         </div>
     )

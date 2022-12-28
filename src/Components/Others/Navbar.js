@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-scroll'
 import { useGlobalContext } from '../../Function/Context';
 
 
@@ -8,28 +8,47 @@ import { useGlobalContext } from '../../Function/Context';
 
 
 const Navbar = () => {
-    const { navigate, signInType } = useGlobalContext();
+    const { navigate } = useGlobalContext();
     const [nav, setnav] = useState(false)
 
     function handleNavClick() {
         setnav(!nav)
     }
 
-    const [bgColor, bgColorF] = useState();
+
+
+
+
+    const [windowHeight, windowHeightF] = React.useState(0);
+
+    React.useEffect(() => {
+        const watchHeight = () => {
+            let scrollY = window.scrollY;
+
+            windowHeightF(scrollY);
+            console.log(windowHeight);
+        };
+
+        window.addEventListener("scroll", watchHeight);
+
+        return function () {
+            window.removeEventListener("scroll", watchHeight);
+        };
+    }, []);
+
+
 
     const bg = {
-        backgroundColor: bgColor ? "rgba(27, 47, 69, 0.9)" : "transparent",
+        backgroundColor: windowHeight > 0 ? "white" : "transparent",
     };
 
-    function handleSetActive(to) {
-        if (to === "home") {
-            bgColorF(null);
-        } else {
-            bgColorF("transparent");
-        }
-    }
+
+
+
+
+
     return (
-        <div className='w-full h-[80px] z-10 md:px-[120px] px-[60px]' >
+        <div style={bg} className='w-full h-[80px] z-10 md:px-[120px] px-[60px] fixed  top-0 bg-transparent transition-all ' >
 
             <div className="px-2 flex justify-between items-center w-full h-full">
                 <div className="flex items-center ">
@@ -44,14 +63,14 @@ const Navbar = () => {
 
                     <Link
                         activeClass="active"
-                        to="/"
+                        to="home"
                         href="/"
                         spy={true}
                         smooth={true}
                         offset={-80}
                         duration={500}
                         className="font-rubik text-[14px] cursor-pointer  border-b-zinc-300 p-4 "
-                        onSetActive={handleSetActive}
+
 
                         onClick={() => {
                             navigate("/");
@@ -69,12 +88,12 @@ const Navbar = () => {
                         offset={-80}
                         duration={500}
                         className="font-rubik text-[14px] cursor-pointer  border-b-zinc-300 p-4 "
-                        onSetActive={handleSetActive}
 
-                    // onClick={() => {
-                    //     navigate("/about");
 
-                    // }}
+                        onClick={() => {
+                            navigate("/about");
+
+                        }}
                     >
                         My Story
                     </Link>
@@ -87,7 +106,7 @@ const Navbar = () => {
                         offset={-80}
                         duration={500}
                         className="font-rubik text-[14px] cursor-pointer  border-b-zinc-300 p-4 "
-                        onSetActive={handleSetActive}
+
 
                         onClick={() => {
                             navigate("/articles");
@@ -104,7 +123,7 @@ const Navbar = () => {
                         offset={-80}
                         duration={500}
                         className="font-rubik text-[14px] cursor-pointer  border-b-zinc-300 p-4 "
-                        onSetActive={handleSetActive}
+
 
                         onClick={() => {
                             navigate("/contact");

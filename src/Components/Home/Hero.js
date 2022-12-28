@@ -7,7 +7,7 @@ import Caption from './Caption'
 
 const Hero = () => {
     return (
-        <div className="w-full h-screen bg-zinc-300 bg-cover">
+        <div id='home' className="w-full h-screen bg-zinc-300 bg-cover">
             < Navbar />
 
             <Caption />
