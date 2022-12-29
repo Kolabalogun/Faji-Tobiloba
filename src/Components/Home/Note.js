@@ -3,9 +3,9 @@ import React from 'react'
 const Note = () => {
     return (
         <div id='note'
-            className=' py-[30px] flex items-center justify-center px-[70px] md:px-[200px] xl:px-[250px]'
+            className=' py-[30px] flex items-center justify-center px-[70px] md:px-[200px] xl:px-[250px] bg-zinc-200'
         >
-            <p className='font-poppins text-[12px]'>Hey there!   <br /> <br />
+            <p className='font-poppins text-black text-[12px]'>Hey there!   <br /> <br />
 
                 I'm Faji Tobiloba, but you can call me Faji for short! Friends and family describe me as being just "a little" quirky and curious. I love to travel the world, meet different people of different background and culture, and learn new things every day about the world around me.
                 <br /> <br />

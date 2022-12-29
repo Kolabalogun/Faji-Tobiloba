@@ -1,4 +1,4 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import React, { useState } from 'react'
 import { Link } from 'react-scroll'
 import { useGlobalContext } from '../../Function/Context';
@@ -34,12 +34,15 @@ const Navbar = () => {
         return function () {
             window.removeEventListener("scroll", watchHeight);
         };
-    }, []);
+    }, [windowHeight]);
 
 
 
     const bg = {
         backgroundColor: windowHeight > 0 ? "white" : "transparent",
+    };
+    const tcolo = {
+        color: windowHeight > 0 ? "#000" : "white",
     };
 
 
@@ -48,18 +51,19 @@ const Navbar = () => {
 
 
     return (
-        <div style={bg} className='w-full h-[80px] z-10 md:px-[120px] px-[60px] fixed  top-0 bg-transparent transition-all ' >
+        <div style={bg} className='w-full h-[80px] z-10  fixed  top-0 bg-transparent transition-all xl:px-[80px] md:px-[80px] px-[60px] shadow-sm
+' >
 
             <div className="px-2 flex justify-between items-center w-full h-full">
                 <div className="flex items-center ">
-                    <h1 className='text-3xl font-bold mr-5  font-rufina sm:text-3xl'>TFT.</h1>
+                    <h1 style={tcolo} className='text-3xl font-bold mr-5  font-rufina sm:text-4xl text-white'>TFT.</h1>
 
 
 
                 </div>
 
                 <ul className="hidden md:flex ">
-                    {/* <li className='font-rubik text-[14px] cursor-pointer  border-b-zinc-300  '>Home</li> */}
+
 
                     <Link
                         activeClass="active"
@@ -69,7 +73,8 @@ const Navbar = () => {
                         smooth={true}
                         offset={-80}
                         duration={500}
-                        className="font-rubik text-[14px] cursor-pointer  border-b-zinc-300 p-4 "
+                        style={tcolo}
+                        className="font-rubik text-[14px] cursor-pointer  border-b-zinc-300 p-4 text-white "
 
 
                         onClick={() => {
@@ -87,7 +92,8 @@ const Navbar = () => {
                         smooth={true}
                         offset={-80}
                         duration={500}
-                        className="font-rubik text-[14px] cursor-pointer  border-b-zinc-300 p-4 "
+                        style={tcolo}
+                        className="font-rubik text-[14px] cursor-pointer  border-b-zinc-300 p-4 text-white "
 
 
                         onClick={() => {
@@ -97,6 +103,24 @@ const Navbar = () => {
                     >
                         My Story
                     </Link>
+                    <Link
+                        activeClass="active"
+                        to='/project'
+                        spy={true}
+                        smooth={true}
+                        offset={-80}
+                        duration={500}
+                        style={tcolo}
+                        className="font-rubik text-[14px] cursor-pointer  border-b-zinc-300 p-4 text-white "
+
+
+                        onClick={() => {
+                            navigate("/projects");
+
+                        }}
+                    >
+                        Projects
+                    </Link>
 
                     <Link
                         activeClass="active"
@@ -105,7 +129,8 @@ const Navbar = () => {
                         smooth={true}
                         offset={-80}
                         duration={500}
-                        className="font-rubik text-[14px] cursor-pointer  border-b-zinc-300 p-4 "
+                        style={tcolo}
+                        className="font-rubik text-[14px] cursor-pointer  border-b-zinc-300 p-4 text-white "
 
 
                         onClick={() => {
@@ -122,7 +147,8 @@ const Navbar = () => {
                         smooth={true}
                         offset={-80}
                         duration={500}
-                        className="font-rubik text-[14px] cursor-pointer  border-b-zinc-300 p-4 "
+                        style={tcolo}
+                        className="font-rubik text-[14px] cursor-pointer  border-b-zinc-300 p-4 text-white "
 
 
                         onClick={() => {
@@ -148,7 +174,7 @@ const Navbar = () => {
 
 
             {
-                nav && <ul className=" h-screen bg-zinc-200 md:hidden w-full px-8">
+                nav && <ul className=" h-screen w-ful bg-zinc-200 md:hidden l px-8">
                     <li className='border-b-2 font-rubik border-zinc-300 w-full cursor-pointer'>Home</li>
                     <li className='border-b-2 font-rubik border-zinc-300 w-full cursor-pointer'>About</li>
                     <li className='border-b-2 font-rubik border-zinc-300 w-full cursor-pointer'>Article</li>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { Route, Routes, useLocation } from "react-router-dom";
 
@@ -8,13 +8,15 @@ import NotFound from "../Frontend/Pages/NotFound";
 import Articles from "../Frontend/Pages/Articles";
 import Contact from "../Frontend/Pages/Contact";
 import About from "../Frontend/Pages/About";
+import Project from "../Frontend/Pages/Project";
+import BlogDetails from "../Components/Article/BlogDetails";
 
 
-const Pages = ({ user, handleLogout, loader }) => {
+const Pages = () => {
 
     const location = useLocation();
     return (
-        <AnimatePresence exitBeforeEnter>
+        <AnimatePresence wait>
             <Routes key={location.pathname} location={location}>
 
 
@@ -25,7 +27,9 @@ const Pages = ({ user, handleLogout, loader }) => {
 
 
 
+                <Route path="/projects" element={<Project />} />
                 <Route path="/articles" element={<Articles />} />
+                <Route path="/articles/:id" element={<BlogDetails />} />
                 <Route path="/contact" element={<Contact />} />
 
                 <Route path="*" element={<NotFound />} />

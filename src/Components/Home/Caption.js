@@ -2,27 +2,29 @@ import React from 'react'
 
 const Caption = () => {
     return (
-        <div className='h-[80vh] flex md:justify-between sm:justify-center  items-center md:px-[150px] px-[80px]'>
-            <div className="flex flex-col w-full" >
+        <div className='h-[80vh] pt-[80px] grid md:grid-cols-2 grid-cols-1 md:justify-center sm:justify-center  items-center xl:px-[140px] md:px-[80px] px-[80px]'>
+
+            <div className="flex flex-col w-full flex-wrap " >
                 <div className="flex items-center">
                     <img src="logoSc.png" className='h-[100px]' alt="" />
                     <img src="su.png" className='h-[120px]' alt="" />
                 </div>
 
-                <div className="flex flex-col">
-                    <h1 className='font-poppins font-bold md:text-[3.5rem] text-[2.5rem] '>I'm Faji Tobiloba</h1>
-                    <p>SU President of the University of Ilorin</p>
+                <div className="flex flex-col mt-[-10px]">
+                    <h1 className='font-poppins font-bold lg:text-[2.6rem] md:text-[3.0rem] text-[2.5rem]  text-white'>I'm Faji Tobiloba</h1>
+                    <p className='py-1  text-white'>SU President of the University of Ilorin. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum assumenda impedit autem exercitationem nam nobis quis? Veritatis numquam libero nisi.</p>
                 </div>
 
                 <div className="flex my-2">
-                    <button className='py-[0.925rem] px-[2.025rem]  transition-colors duration-200 delay-100 border-blue-800 border font-[600] '>Contact me</button>
-                    <button className='py-[0.925rem] px-[2.025rem] transition-colors duration-200 delay-100   border-blue-800 border font-[600] bg-transparent mx-2'>My Story</button>
+                    <button className='py-[0.825rem] px-[2.025rem]  transition-colors duration-200 delay-100 border-blue-800 border font-[600] '>Contact me</button>
+                    <button className='py-[0.825rem] px-[2.025rem] transition-colors duration-200 delay-100  border-blue-800 border-[1px] font-[600] bg-transparent mx-2  hover:bg-blue-800 text-white hover:text-white'>My Story</button>
                 </div>
 
             </div>
-            <div className="md:flex flex-col hidden" >
 
-                <img src="fajj.png" className='h-[600px] w-[600px]' alt="" />
+            <div className="md:flex flex-col hidden w-full ml-[80px]" >
+
+                <img src="fajj.png" className='h-[600px] w-[500px]' alt="" />
 
             </div>
         </div>

@@ -7,7 +7,7 @@ import Caption from './Caption'
 
 const Hero = () => {
     return (
-        <div id='home' className="w-full h-screen bg-zinc-300 bg-cover">
+        <div id='home' className="w-full bg-rubik h-screen  bg-cover">
             < Navbar />
 
             <Caption />
@@ -25,7 +25,7 @@ const Hero = () => {
                 className="absolute cursor-pointer hover:scale-75  bottom-5 left-[50%] transition-all duration-200 delay-100 "
 
             >
-                <img src="ad.png" className='h-8
+                <img src="mouse.svg" className='h-8
                 ' alt="" />
             </Link>
 

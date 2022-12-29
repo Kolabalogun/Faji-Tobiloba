@@ -12,6 +12,14 @@ module.exports = {
         'poppins': ['Poppins', 'san-serif'],
 
       },
+      colors: {
+        'rubik': '#0d1727',
+        'twitter': '#1a8cd8',
+        'linked': '#0073b1',
+        'ig': '#f702af'
+
+
+      },
     },
 
     screens: {
@@ -24,8 +32,13 @@ module.exports = {
       'lg': '1024px',
       // => @media (min-width: 1024px) { ... }
 
+      'xlg': '1124px',
+      // => @media (min-width: 1124px) { ... }
+
       'xl': '1280px',
       // => @media (min-width: 1280px) { ... }
+
+
 
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }

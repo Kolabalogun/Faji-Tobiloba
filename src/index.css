@@ -9,6 +9,10 @@
     @apply p-4;
   }
 
+  h1 {
+    @apply font-poppins;
+  }
+
   button {
     @apply text-white border bg-blue-800 border-blue-800 hover:bg-transparent hover:text-blue-800 rounded-md;
   }

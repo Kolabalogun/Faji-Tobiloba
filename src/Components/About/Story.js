@@ -2,15 +2,15 @@ import React from 'react'
 
 const Story = () => {
     return (
-        <div id='story' className='py-[100px] px-[60px] md:px-[100px] xl:px-[100px] lg:px-[100px] flex-col flex '>
+        <div id='story' className='py-[120px] px-[60px] md:px-[100px] xl:px-[100px] lg:px-[100px] flex-col flex '>
 
-            <div className="flex flex-nowrap md:px-[100px] xl:px-[150px] lg:px-[150px] ">
+            <div className="flex flex-nowrap xl:px-[130px] lg:px-[0px] ">
                 <div className="rounded-[50%] h-[250px] w-[250px] relative border">
                     <img className='rounded-[50%] object-fill absolute  w-[100%] h-full' src="fabg.jpg" alt="faji" />
                 </div>
 
                 <div className="w-[70%] flex flex-nowrap">
-                    <h2 className='font-bold text-[40px] whitespace-pre-wrap flex-wrap leading-[50px] font-poppins my-[2rem]  pl-9'>Rising senior at the University of Ilorin studying Engineering with career interests in tech, sports, and music.</h2>
+                    <h2 className='font-bold text-[40px] whitespace-pre-wrap flex-wrap leading-[50px] font-poppins my-[2rem]  pl-9 text-white'>Rising senior at the University of Ilorin studying Engineering with career interests in tech, sports, and music.</h2>
                 </div>
 
             </div>
@@ -20,24 +20,10 @@ const Story = () => {
                 <div className="flex items-start">
                     <div className="flex items-center w-[50%]">
                         <div className="w-[200px] bg-white h-[2px]"></div>
-                        <p className='font-poppins  w-7 px-[120px] text-[12px]'>Intro</p>
+                        <p className='font-poppins  w-7 px-[120px] text-[12px] text-white'>Intro</p>
                     </div>
                     <div className=" flex flex-wrap w-[800px] ">
-                        <p className='break-words '>I was born and raised in Southern California where I grew up in a Lakers town and always had good music playing around the house. These threads of family, basketball, and music have defined my life path and experiences. I am entering my final year at the University of Pennsylvania where I am studying Finance and Management at the Wharton School of Business. Additionally, I am a team captain on Penn’s Women’s Basketball Team.</p>
-                    </div>
-
-
-                </div>
-            </div>
-            <div className="flex flex-col ml-[150px] mt-[70px]" >
-
-                <div className="flex items-start">
-                    <div className="flex items-center w-[50%]">
-                        <div className="w-[200px] bg-white h-[2px]"></div>
-                        <p className='font-poppins  w-7 px-[120px] text-[12px]'>Education</p>
-                    </div>
-                    <div className=" flex flex-wrap w-[800px] ">
-                        <p className='break-words '>I was born and raised in Southern California where I grew up in a Lakers town and always had good music playing around the house. These threads of family, basketball, and music have defined my life path and experiences. I am entering my final year at the University of Pennsylvania where I am studying Finance and Management at the Wharton School of Business. Additionally, I am a team captain on Penn’s Women’s Basketball Team.</p>
+                        <p className='break-words text-white '>I was born and raised in Southern California where I grew up in a Lakers town and always had good music playing around the house. These threads of family, basketball, and music have defined my life path and experiences. I am entering my final year at the University of Pennsylvania where I am studying Finance and Management at the Wharton School of Business. Additionally, I am a team captain on Penn’s Women’s Basketball Team.</p>
                     </div>
 
 
@@ -48,10 +34,10 @@ const Story = () => {
                 <div className="flex items-start">
                     <div className="flex items-center w-[50%]">
                         <div className="w-[200px] bg-white h-[2px]"></div>
-                        <p className='font-poppins  w-7 px-[120px] text-[12px]'>Career</p>
+                        <p className='font-poppins  w-7 px-[120px] text-[12px] text-white'>Education</p>
                     </div>
                     <div className=" flex flex-wrap w-[800px] ">
-                        <p className='break-words '>I was born and raised in Southern California where I grew up in a Lakers town and always had good music playing around the house. These threads of family, basketball, and music have defined my life path and experiences. I am entering my final year at the University of Pennsylvania where I am studying Finance and Management at the Wharton School of Business. Additionally, I am a team captain on Penn’s Women’s Basketball Team.</p>
+                        <p className='break-words text-white '>I was born and raised in Southern California where I grew up in a Lakers town and always had good music playing around the house. These threads of family, basketball, and music have defined my life path and experiences. I am entering my final year at the University of Pennsylvania where I am studying Finance and Management at the Wharton School of Business. Additionally, I am a team captain on Penn’s Women’s Basketball Team.</p>
                     </div>
 
 
@@ -62,10 +48,24 @@ const Story = () => {
                 <div className="flex items-start">
                     <div className="flex items-center w-[50%]">
                         <div className="w-[200px] bg-white h-[2px]"></div>
-                        <p className='font-poppins  w-7 px-[120px] text-[12px]'>Achievement</p>
+                        <p className='font-poppins  w-7 px-[120px] text-[12px] text-white'>Career</p>
                     </div>
                     <div className=" flex flex-wrap w-[800px] ">
-                        <p className='break-words '>
+                        <p className='break-words text-white '>I was born and raised in Southern California where I grew up in a Lakers town and always had good music playing around the house. These threads of family, basketball, and music have defined my life path and experiences. I am entering my final year at the University of Pennsylvania where I am studying Finance and Management at the Wharton School of Business. Additionally, I am a team captain on Penn’s Women’s Basketball Team.</p>
+                    </div>
+
+
+                </div>
+            </div>
+            <div className="flex flex-col ml-[150px] mt-[70px]" >
+
+                <div className="flex items-start">
+                    <div className="flex items-center w-[50%]">
+                        <div className="w-[200px] bg-white h-[2px]"></div>
+                        <p className='font-poppins  w-7 px-[120px] text-[12px] text-white'>Achievement</p>
+                    </div>
+                    <div className=" flex flex-wrap w-[800px] ">
+                        <p className='break-words text-white '>
                             -      Initiated the Fiscal Responsibility Bill <br /> <br />
                             -  Served on the Economic Policy Coordination Committee <br /> <br />
 
@@ -82,10 +82,10 @@ const Story = () => {
                 <div className="flex items-start">
                     <div className="flex items-center w-[50%]">
                         <div className="w-[200px] bg-white h-[2px]"></div>
-                        <p className='font-poppins  w-7 px-[120px] text-[12px]'>Public References</p>
+                        <p className='font-poppins  w-7 px-[120px] text-[12px] text-white'>Public References</p>
                     </div>
                     <div className=" flex flex-wrap w-[800px] ">
-                        <p className='break-words '>
+                        <p className='break-words text-white '>
 
                             “As SU President of the University of Ilorin (in 2022) his intervention then was a turning Point” in the fight against polio in University of Ilorin” – Bill Gates
 

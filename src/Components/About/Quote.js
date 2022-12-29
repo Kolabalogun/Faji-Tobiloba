@@ -40,7 +40,7 @@ const Quote = () => {
 
 
     return (
-        <div className='h-[40vh] px-8 flex items-center justify-between bg-white'>
+        <div className='h-[50vh] px-8 flex items-center justify-between bg-zinc-200'>
 
 
             <div onClick={handleprev} className="p-2  bg-zinc-200 cursor-pointer hover:bg-zinc-100  rounded-xl">
@@ -57,7 +57,7 @@ const Quote = () => {
                 ))}
 
 
-                <p className='mt-7'>{author}</p>
+                <p className='mt-7 text-black'>{author}</p>
             </div>
 
 
