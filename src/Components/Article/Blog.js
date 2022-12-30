@@ -8,6 +8,7 @@ const Blog = () => {
                 <div className="cursor-pointer">
                     <img src="a.jpg" alt="blogImg" className='w-[100%]' />
                 </div>
+
                 <div className="border">
                     <div className=" p-[50px] sm-p-[20px]">
                         <div className="text-gray-700 text-[12px] mb-[5px] font-rubik uppercase "><span>Posted on June 30, 2017</span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span><a href="blog-grid.html" className="text-medium-gray ">Branding</a></span></div>

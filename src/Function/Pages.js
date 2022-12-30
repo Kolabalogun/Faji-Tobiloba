@@ -10,9 +10,15 @@ import Contact from "../Frontend/Pages/Contact";
 import About from "../Frontend/Pages/About";
 import Project from "../Frontend/Pages/Project";
 import BlogDetails from "../Components/Article/BlogDetails";
+import Login from "../Auth/Login";
+import { useGlobalContext } from "./Context";
+import { Admin } from "../Backend/Admin";
+
 
 
 const Pages = () => {
+
+    const { user } = useGlobalContext()
 
     const location = useLocation();
     return (
@@ -33,6 +39,18 @@ const Pages = () => {
                 <Route path="/contact" element={<Contact />} />
 
                 <Route path="*" element={<NotFound />} />
+
+
+
+                <Route path="/auth" element={<Login />} />
+
+
+                {user &&
+                    <Route path="/admin" element={<Admin />} />
+                }
+
+
+
 
             </Routes>
         </AnimatePresence>

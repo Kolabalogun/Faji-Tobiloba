@@ -74,7 +74,7 @@ const Navbar = () => {
                         offset={-80}
                         duration={500}
                         style={tcolo}
-                        className="font-rubik text-[14px] cursor-pointer  border-b-zinc-300 p-4 text-white "
+                        className={windowHeight > 0 ? "font-rubik text-[14px] cursor-pointer  border-b-zinc-300 py-2 linked m-4 text-white" : "font-rubik text-[14px] cursor-pointer  border-b-zinc-300 py-2 link m-4 text-white  "}
 
 
                         onClick={() => {
@@ -93,7 +93,7 @@ const Navbar = () => {
                         offset={-80}
                         duration={500}
                         style={tcolo}
-                        className="font-rubik text-[14px] cursor-pointer  border-b-zinc-300 p-4 text-white "
+                        className={windowHeight > 0 ? "font-rubik text-[14px] cursor-pointer  border-b-zinc-300 py-2 linked m-4 text-white" : "font-rubik text-[14px] cursor-pointer  border-b-zinc-300 py-2 link m-4 text-white  "}
 
 
                         onClick={() => {
@@ -111,7 +111,7 @@ const Navbar = () => {
                         offset={-80}
                         duration={500}
                         style={tcolo}
-                        className="font-rubik text-[14px] cursor-pointer  border-b-zinc-300 p-4 text-white "
+                        className={windowHeight > 0 ? "font-rubik text-[14px] cursor-pointer  border-b-zinc-300 py-2 linked m-4 text-white" : "font-rubik text-[14px] cursor-pointer  border-b-zinc-300 py-2 link m-4 text-white  "}
 
 
                         onClick={() => {
@@ -130,7 +130,7 @@ const Navbar = () => {
                         offset={-80}
                         duration={500}
                         style={tcolo}
-                        className="font-rubik text-[14px] cursor-pointer  border-b-zinc-300 p-4 text-white "
+                        className={windowHeight > 0 ? "font-rubik text-[14px] cursor-pointer  border-b-zinc-300 py-2 linked m-4 text-white" : "font-rubik text-[14px] cursor-pointer  border-b-zinc-300 py-2 link m-4 text-white  "}
 
 
                         onClick={() => {
@@ -148,7 +148,7 @@ const Navbar = () => {
                         offset={-80}
                         duration={500}
                         style={tcolo}
-                        className="font-rubik text-[14px] cursor-pointer  border-b-zinc-300 p-4 text-white "
+                        className={windowHeight > 0 ? "font-rubik text-[14px] cursor-pointer  border-b-zinc-300 py-2 linked m-4 text-white" : "font-rubik text-[14px] cursor-pointer  border-b-zinc-300 py-2 link m-4 text-white  "}
 
 
                         onClick={() => {

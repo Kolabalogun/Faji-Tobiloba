@@ -2,6 +2,7 @@
 import React, { useContext, useEffect, useState } from "react";
 // import { auth, db, provider } from "../Utils/Firebase";
 import { useNavigate, useParams } from "react-router-dom";
+import { auth } from "../Utils/Firebase";
 
 // import { toast } from "react-toastify";
 // import { collection, deleteDoc, doc, onSnapshot } from "firebase/firestore";
@@ -15,15 +16,15 @@ const AppProvider = ({ children }) => {
     // for user login confirmation
     const [user, setuser] = useState(null);
 
-    // useEffect(() => {
-    //     auth.onAuthStateChanged((authUser) => {
-    //         if (authUser) {
-    //             setuser(authUser);
-    //         } else {
-    //             setuser(null);
-    //         }
-    //     });
-    // }, []);
+    useEffect(() => {
+        auth.onAuthStateChanged((authUser) => {
+            if (authUser) {
+                setuser(authUser);
+            } else {
+                setuser(null);
+            }
+        });
+    }, []);
 
     // //   logging out user
     // const handleLogout = () => {
@@ -113,6 +114,13 @@ const AppProvider = ({ children }) => {
     //     });
     // };
 
+    // Admin Page STate 
+
+    const [pageState, pageStateF] = useState('default')
+
+
+
+
     return (
         <AppContext.Provider
             value={{
@@ -130,6 +138,8 @@ const AppProvider = ({ children }) => {
                 notificationF,
 
                 blogs,
+
+                pageState, pageStateF
                 // handleDelete,
 
 

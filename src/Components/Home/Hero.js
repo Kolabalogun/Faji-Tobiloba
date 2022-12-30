@@ -22,12 +22,13 @@ const Hero = () => {
                 smooth={true}
                 offset={-80}
                 duration={800}
-                className="absolute cursor-pointer hover:scale-75  bottom-5 left-[50%] transition-all duration-200 delay-100 "
+                className="absolute cursor-pointer hover:scale-[0.9]  bottom-5 left-[50%] transition-all duration-200 delay-100  mouse"
 
             >
-                <img src="mouse.svg" className='h-8
-                ' alt="" />
+                <span className="mouse-wheel"></span>
             </Link>
+
+
 
 
 
