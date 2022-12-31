@@ -1,7 +1,9 @@
 // import { signInWithPopup, signOut } from "firebase/auth";
+import { signOut } from "firebase/auth";
 import React, { useContext, useEffect, useState } from "react";
 // import { auth, db, provider } from "../Utils/Firebase";
 import { useNavigate, useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 import { auth } from "../Utils/Firebase";
 
 // import { toast } from "react-toastify";
@@ -26,16 +28,16 @@ const AppProvider = ({ children }) => {
         });
     }, []);
 
-    // //   logging out user
-    // const handleLogout = () => {
-    //     signOut(auth).then(() => {
-    //         setuser(null);
-    //         navigate("/");
-    //         signUserOut();
+    //   logging out user
+    const handleLogout = () => {
+        signOut(auth).then(() => {
+            setuser(null);
+            navigate("/");
 
-    //         return toast.error("You've successfully Log Out");
-    //     });
-    // };
+
+            return toast.error("You've successfully Log Out");
+        });
+    };
 
     // i use this to se the type of page so as to disable link on pages
     const [pageType, pageTypeF] = useState(null);
@@ -107,12 +109,6 @@ const AppProvider = ({ children }) => {
 
 
 
-    // const signUserOut = () => {
-    //     signOut(auth).then(() => {
-    //         localStorage.clear();
-
-    //     });
-    // };
 
     // Admin Page STate 
 
@@ -126,7 +122,7 @@ const AppProvider = ({ children }) => {
             value={{
                 user,
                 setuser,
-                // handleLogout,
+                handleLogout,
                 pageType,
                 pageTypeF,
                 navigate,
@@ -143,7 +139,7 @@ const AppProvider = ({ children }) => {
                 // handleDelete,
 
 
-                // signUserOut,
+
             }}
         >
             {children}

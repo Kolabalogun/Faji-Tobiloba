@@ -18,6 +18,18 @@
   }
 }
 
+/* my Global CSS  */
+
+.all-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.f-col {
+  display: flex;
+  flex-direction: column;
+}
+
 /* Mouuse  CSS */
 .mouse {
   width: 28px;
