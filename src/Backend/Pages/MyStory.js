@@ -182,9 +182,9 @@ const MyStory = () => {
               </div>
 
               <div className="flex items-start">
-                <div className="rounded-[50%] h-[250px]  flex justify-center items-center w-[250px] mr-[20px] relative border">
+                <div className="rounded-[10%] h-[250px]  flex justify-center items-center w-[350px] mr-[20px] relative border">
                   <img
-                    className="rounded-[50%] object-fill absolute  w-[100%] h-full"
+                    className="rounded-[10%] object-cover absolute  w-[100%] h-full"
                     src={imgUrl}
                     alt="faji"
                   />

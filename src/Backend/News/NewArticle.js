@@ -9,18 +9,22 @@ import {
   doc,
   getDoc,
   serverTimestamp,
+  updateDoc,
 } from "firebase/firestore";
 import { db, storage } from "../../Utils/Firebase";
 import { useParams } from "react-router";
+import { Link } from "react-router-dom";
 
 const initialState = {
   title: "",
   imgUrl: "",
   description: "",
+  comment: [],
 };
 
 const NewArticle = ({ handleState }) => {
-  const { setloader, user, navigate } = useGlobalContext();
+  const { setloader, user, navigate, pageStateF, notification, notificationF } =
+    useGlobalContext();
 
   const { id } = useParams();
 
@@ -29,13 +33,9 @@ const NewArticle = ({ handleState }) => {
   const [progress, setprogress] = useState(null);
   const [dateId, setdateId] = useState("");
 
-  const { title, category, description } = form;
+  const { title, imgUrl, description } = form;
 
   const editorRefArticleDescription = useRef(null);
-
-  function handleCategory(e) {
-    setform({ ...form, category: e.target.value });
-  }
 
   // to set timeId
   useEffect(() => {
@@ -123,6 +123,7 @@ const NewArticle = ({ handleState }) => {
 
   useEffect(() => {
     id && getAriticleDetail();
+    id && pageStateF("article");
   }, [id]);
 
   const getAriticleDetail = async () => {
@@ -131,6 +132,31 @@ const NewArticle = ({ handleState }) => {
     if (snapshot.exists()) {
       setform({ ...snapshot.data() });
     }
+  };
+
+  const updateArticle = async (e) => {
+    e.preventDefault();
+
+    if (title && editorRefArticleDescription.current.getContent().length > 1) {
+      setloader(true);
+
+      try {
+        await updateDoc(doc(db, "Articles", id), {
+          ...form,
+          timestamp: serverTimestamp(),
+          author: user.displayName,
+          userId: user.uid,
+        });
+        toast.success("Article updated");
+        setloader(false);
+      } catch (err) {
+        console.log(err);
+        notificationF(err);
+      }
+    } else {
+      return toast.error("All fields must be filled");
+    }
+    navigate("/articles");
   };
 
   return (
@@ -144,12 +170,14 @@ const NewArticle = ({ handleState }) => {
             Add New Article
           </h6>
 
-          <button
-            onClick={handleState}
-            className="px-4 py-1 text-[13px] uppercase font-semibold"
-          >
-            See articles
-          </button>
+          <Link to={"/admin"} onClick={pageStateF("article")}>
+            <button
+              onClick={handleState}
+              className="px-4 py-1 text-[13px] uppercase font-semibold"
+            >
+              See articles
+            </button>
+          </Link>
         </div>
 
         <p className="text-[13px]">Lorem ipsum dolor sit amet consectetur.</p>
@@ -176,15 +204,25 @@ const NewArticle = ({ handleState }) => {
           <h6 className="text-[#0d1727] text-base leading-relaxed font-semibold ">
             Ariticle Thumbnail
           </h6>
-
-          <input
-            type="file"
-            name="file"
-            onChange={(e) => setfile(e.target.files[0])}
-            placeholder="Enter Image"
-            required
-            className="border py-[18px] px-[25px] text-[14px] w-full"
-          />
+          <div className="flex items-start">
+            {imgUrl && (
+              <div className="rounded-[10%] h-[250px]  flex justify-center items-center w-[350px] mr-[20px] relative border">
+                <img
+                  className="rounded-[10%] object-cover absolute  w-[100%] h-full"
+                  src={imgUrl}
+                  alt="faji"
+                />
+              </div>
+            )}
+            <input
+              type="file"
+              name="file"
+              onChange={(e) => setfile(e.target.files[0])}
+              placeholder="Enter Image"
+              required
+              className="border py-[18px] px-[25px] text-[14px] w-full"
+            />
+          </div>
         </div>
       </div>
       <div className="mx-3">
@@ -197,7 +235,7 @@ const NewArticle = ({ handleState }) => {
             onInit={(evt, editor) =>
               (editorRefArticleDescription.current = editor)
             }
-            initialValue={"Article Details"}
+            initialValue={description}
             init={{
               height: 650,
               menu: {
@@ -255,12 +293,25 @@ const NewArticle = ({ handleState }) => {
           />
         </div>
 
-        <button
-          onClick={handleSubmit}
-          className="text-[13px] bg-transparent m-auto my-5  flex justify-center items-center border-[2px] border-black px-[34px] py-[9px] text-black font-poppins w-[200px] hover:bg-black hover:text-white"
-        >
-          SAVE
-        </button>
+        <p className="text-red-600 text-[14px]">{notification}</p>
+
+        {id ? (
+          <button
+            onClick={updateArticle}
+            disabled={progress !== null && progress < 100}
+            className="text-[13px] bg-transparent m-auto my-5  flex justify-center items-center border-[2px] border-black px-[34px] py-[9px] text-black font-poppins w-[200px] hover:bg-black hover:text-white"
+          >
+            UPDATE
+          </button>
+        ) : (
+          <button
+            onClick={handleSubmit}
+            disabled={progress !== null && progress < 100}
+            className="text-[13px] bg-transparent m-auto my-5  flex justify-center items-center border-[2px] border-black px-[34px] py-[9px] text-black font-poppins w-[200px] hover:bg-black hover:text-white"
+          >
+            SAVE
+          </button>
+        )}
       </div>
     </div>
   );

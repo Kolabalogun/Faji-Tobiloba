@@ -1,55 +1,168 @@
-import React, { useEffect } from 'react'
-import Footer from '../../Components/Others/Footer'
-import Navbar from '../../Components/Others/Navbar'
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import React, { useEffect, useState } from "react";
+import { toast } from "react-toastify";
+import Footer from "../../Components/Others/Footer";
+import Loader from "../../Components/Others/Loader";
+import Navbar from "../../Components/Others/Navbar";
+import { useGlobalContext } from "../../Function/Context";
+import { db } from "../../Utils/Firebase";
+
+const initialState = {
+  username: "",
+  email: "",
+  phone: "",
+  subject: "",
+  description: "",
+};
 
 const Contact = () => {
+  const { setloader, user, navigate, notification, notificationF, loader } =
+    useGlobalContext();
 
-    useEffect(() => {
-        window.scroll(0, 0)
-    }, [])
-    return (
+  const [form, setform] = useState(initialState);
+
+  const [dateId, setdateId] = useState("");
+
+  const { username, email, phone, subject, description } = form;
+
+  useEffect(() => {
+    window.scroll(0, 0);
+    const dateId = new Date().getTime();
+    setdateId(dateId);
+  }, []);
+
+  const handleChange = (e) => {
+    setform({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (username && email && phone && description) {
+      setloader(true);
+      try {
+        await addDoc(collection(db, "Messages"), {
+          ...form,
+
+          timestamp: serverTimestamp(),
+          author: user.displayName,
+          userId: user.uid,
+          dateId: dateId,
+          comment: [],
+        });
+        setloader(false);
+        toast.success("Message Sent");
+      } catch (error) {
+        console.log(error);
+        notificationF(error);
+      }
+    } else {
+      return toast.error("All fields must be filled");
+    }
+  };
+
+  return (
+    <>
+      {loader ? (
+        <Loader />
+      ) : (
         <>
-            <div className="bg-cover h-[70vh] flex flex-col justify-center items-center" style={{ backgroundImage: "url('wave.svg')" }}>
-                <Navbar />
+          <div
+            className="bg-cover h-[70vh] flex flex-col justify-center items-center"
+            style={{ backgroundImage: "url('wave.svg')" }}
+          >
+            <Navbar />
 
-                <div className="mt-[-100px] text-center ">
-                    <h1 className='text-[55px] leading-[75px] font-bold text-white'>Contact Me</h1>
-                    <p className='text-white'>Have any questions? Fill out the form and I’ll get you a response soon!</p>
-                </div>
-
+            <div className="mt-[-100px] text-center ">
+              <h1 className="text-[55px] leading-[75px] font-bold text-white">
+                Contact Me
+              </h1>
+              <p className="text-white">
+                Have any questions? Fill out the form and I’ll get you a
+                response soon!
+              </p>
             </div>
+          </div>
 
-            <div className="flex items-center justify-center px-[400px] text-[14px]">
-                <p>Feel free to ask / inquire about anything (school, basketball, internships, music, etc). Hoping to be a resource and be of help in your journey in any way possible.
-                    <br /> <br />
+          <div className="flex items-center justify-center px-[400px] text-[14px]">
+            <p>
+              Feel free to ask / inquire about anything (school, basketball,
+              internships, music, etc). Hoping to be a resource and be of help
+              in your journey in any way possible.
+              <br /> <br />
+              Similarly, please use this form or email directly me if your
+              message regards any opportunity.
+            </p>
+          </div>
 
-                    Similarly, please use this form or email directly me if your message regards any opportunity.</p>
+          <div className="flex  flex-col  my-[30px] px-[200px] text-[14px]">
+            <div className="grid grid-cols-2 gap-3 my-[10px]">
+              <input
+                type="text"
+                name="username"
+                value={username}
+                onChange={handleChange}
+                placeholder="Name"
+                required
+                className="border py-[18px] px-[25px] text-[14px] "
+              />
+              <input
+                type="email"
+                name="email"
+                value={email}
+                onChange={handleChange}
+                placeholder="Email"
+                required
+                className="border py-[18px] px-[25px] text-[14px] "
+              />
             </div>
-
-            <div className="flex  flex-col  my-[30px] px-[200px] text-[14px]">
-                <div className="grid grid-cols-2 gap-3 my-[10px]">
-                    <input type="text" placeholder='Name' required className='border py-[18px] px-[25px] text-[14px] ' />
-                    <input type="email" placeholder='Email' required className='border py-[18px] px-[25px] text-[14px] ' />
-                </div>
-                <div className="grid grid-cols-2 gap-3 my-[10px]">
-                    <input type="number" placeholder='Phone' required className='border py-[18px] px-[25px] text-[14px] ' />
-                    <input type="text" placeholder='Subject' className='border py-[18px] px-[25px] text-[14px] ' />
-                </div>
-                <div className="grid grid-cols-1 gap-3 my-[10px]">
-                    <textarea placeholder='Message' required className='border py-[18px] px-[25px] text-[14px]  
-                    '  rows="10" />
-
-                </div>
-
-                <button className='text-[13px] bg-transparent m-auto my-5  flex justify-center items-center border-[2px] border-black px-[34px] py-[9px] text-black font-poppins w-[200px] hover:bg-black hover:text-white'>SEND MESSAGE</button>
+            <div className="grid grid-cols-2 gap-3 my-[10px]">
+              <input
+                type="number"
+                name="phone"
+                value={phone}
+                onChange={handleChange}
+                placeholder="Phone"
+                required
+                className="border py-[18px] px-[25px] text-[14px] "
+              />
+              <input
+                type="text"
+                name="subject"
+                value={subject}
+                onChange={handleChange}
+                placeholder="Subject"
+                className="border py-[18px] px-[25px] text-[14px] "
+              />
             </div>
+            <div className="grid grid-cols-1 gap-3 my-[10px]">
+              <textarea
+                name="description"
+                value={description}
+                onChange={handleChange}
+                placeholder="Message"
+                required
+                className="border py-[18px] px-[25px] text-[14px]  
+                    "
+                rows="10"
+              />
+            </div>
+            <p className="text-center text-[14px] text-red-600">
+              {notification}
+            </p>
 
+            <button
+              onClick={handleSubmit}
+              className="text-[13px] bg-transparent m-auto my-5  flex justify-center items-center border-[2px] border-black px-[34px] py-[9px] text-black font-poppins w-[200px] hover:bg-black hover:text-white"
+            >
+              SEND MESSAGE
+            </button>
+          </div>
 
-
-            <Footer />
+          <Footer />
         </>
-    )
-}
+      )}
+    </>
+  );
+};
 
-export default Contact
-
+export default Contact;

@@ -1,52 +1,41 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend:
-    {
+    extend: {
       fontFamily: {
-        'rubik': ['Rubik', 'sans-serif'],
-        'rufina': ['Rufina', 'serif'],
-        'poppins': ['Poppins', 'san-serif'],
-
+        rubik: ["Rubik", "sans-serif"],
+        rufina: ["Rufina", "serif"],
+        poppins: ["Poppins", "san-serif"],
       },
       colors: {
-        'rubik': '#0d1727',
-        'twitter': '#1a8cd8',
-        'linked': '#0073b1',
-        'ig': '#f702af'
-
-
+        rubik: "#0d1727",
+        twitter: "#1a8cd8",
+        linked: "#0073b1",
+        ig: "#f702af",
       },
     },
 
     screens: {
-      'sm': '640px',
+      mobile: "400px",
+
+      sm: "640px",
       // => @media (min-width: 640px) { ... }
 
-      'md': '768px',
+      md: "768px",
       // => @media (min-width: 768px) { ... }
 
-      'lg': '1024px',
+      xmd: "900px",
+
+      lg: "1024px",
       // => @media (min-width: 1024px) { ... }
 
-
-
-      'xl': '1280px',
+      xl: "1280px",
       // => @media (min-width: 1280px) { ... }
 
-
-
-      '2xl': '1536px',
+      "2xl": "1536px",
       // => @media (min-width: 1536px) { ... }
-    }
-  }
-  ,
-
-
+    },
+  },
   plugins: [],
-}
-
+};

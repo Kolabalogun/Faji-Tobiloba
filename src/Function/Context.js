@@ -1,5 +1,11 @@
 import { signOut } from "firebase/auth";
-import { collection, doc, getDoc, onSnapshot } from "firebase/firestore";
+import {
+  collection,
+  deleteDoc,
+  doc,
+  getDoc,
+  onSnapshot,
+} from "firebase/firestore";
 import React, { useContext, useEffect, useState } from "react";
 
 import { useNavigate, useParams } from "react-router-dom";
@@ -13,7 +19,7 @@ const AppProvider = ({ children }) => {
   const navigate = useNavigate();
 
   // for user login confirmation
-  const [user, setuser] = useState(null);
+  const [user, setuser] = useState(localStorage.getItem("isLoggedIn"));
 
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
@@ -30,7 +36,7 @@ const AppProvider = ({ children }) => {
     signOut(auth).then(() => {
       setuser(null);
       navigate("/");
-
+      localStorage.setItem("isLoggedIn", false);
       return toast.error("You've successfully Log Out");
     });
   };
@@ -53,78 +59,6 @@ const AppProvider = ({ children }) => {
       clearTimeout(timeout);
     };
   }, [notification]);
-
-  //   Articles
-
-  const [Articles, ArticlesF] = useState([]);
-
-  useEffect(() => {
-    setloader(true);
-    const unsub = onSnapshot(
-      collection(db, "Articles"),
-
-      (snapshot) => {
-        let list = [];
-
-        snapshot.docs.forEach((doc) => {
-          list.push({ id: doc.id, ...doc.data() });
-        });
-
-        ArticlesF(list);
-        setloader(false);
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
-
-    return () => {
-      unsub();
-    };
-  }, []);
-
-  //   Projects
-
-  const [Projects, ProjectsF] = useState([]);
-
-  useEffect(() => {
-    setloader(true);
-    const unsub = onSnapshot(
-      collection(db, "Projects"),
-
-      (snapshot) => {
-        let list = [];
-
-        snapshot.docs.forEach((doc) => {
-          list.push({ id: doc.id, ...doc.data() });
-        });
-
-        ProjectsF(list);
-        setloader(false);
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
-
-    return () => {
-      unsub();
-    };
-  }, []);
-
-  // // to delete blogs
-  // const handleDelete = async (id) => {
-  //     if (window.confirm("Are you sure you want to delete this blog?")) {
-  //         try {
-  //             setloader(true);
-  //             await deleteDoc(doc(db, "blogs", id));
-  //             setloader(false);
-  //             toast.error("Blog successfully deleted");
-  //         } catch (error) {
-  //             console.log(error);
-  //         }
-  //     }
-  // };
 
   // HomePage
 
@@ -154,6 +88,142 @@ const AppProvider = ({ children }) => {
     setloader(false);
   };
 
+  //   Articles
+
+  const [Articles, ArticlesF] = useState([]);
+
+  useEffect(() => {
+    setloader(true);
+    const unsub = onSnapshot(
+      collection(db, "Articles"),
+
+      (snapshot) => {
+        let list = [];
+
+        snapshot.docs.forEach((doc) => {
+          list.push({ id: doc.id, ...doc.data() });
+        });
+
+        if (!list || list.length === 0) {
+        } else {
+          ArticlesF(list);
+
+          setloader(false);
+        }
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+
+    return () => {
+      unsub();
+    };
+  }, []);
+
+  const handleDeleteArticle = async (id) => {
+    if (window.confirm("Are you sure you want to delete this Article?")) {
+      try {
+        setloader(true);
+        await deleteDoc(doc(db, "Articles", id));
+        setloader(false);
+        toast.error("Project deleted");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  };
+
+  //   Projects
+
+  const [Projects, ProjectsF] = useState([]);
+
+  useEffect(() => {
+    setloader(true);
+    const unsub = onSnapshot(
+      collection(db, "Projects"),
+
+      (snapshot) => {
+        let list = [];
+
+        snapshot.docs.forEach((doc) => {
+          list.push({ id: doc.id, ...doc.data() });
+        });
+
+        if (!list || list.length === 0) {
+        } else {
+          ProjectsF(list);
+          setloader(false);
+        }
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+
+    return () => {
+      unsub();
+    };
+  }, []);
+
+  const handleDeleteProject = async (id) => {
+    if (window.confirm("Are you sure you want to delete this Project?")) {
+      try {
+        setloader(true);
+        await deleteDoc(doc(db, "Projects", id));
+        setloader(false);
+        toast.error("Project deleted");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  };
+
+  //   Messages
+
+  const [Messages, MessagesF] = useState([]);
+
+  useEffect(() => {
+    setloader(true);
+    const unsub = onSnapshot(
+      collection(db, "Messages"),
+
+      (snapshot) => {
+        let list = [];
+
+        snapshot.docs.forEach((doc) => {
+          list.push({ id: doc.id, ...doc.data() });
+        });
+
+        if (!list || list.length === 0) {
+        } else {
+          MessagesF(list);
+          setloader(false);
+        }
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+
+    return () => {
+      unsub();
+    };
+  }, []);
+
+  const handleDeleteMessage = async (id) => {
+    if (window.confirm("Are you sure you want to delete this Message?")) {
+      try {
+        setloader(true);
+        await deleteDoc(doc(db, "Messages", id));
+        setloader(false);
+        toast.error("Message deleted");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  };
+
   const [pageState, pageStateF] = useState("default");
 
   return (
@@ -180,6 +250,10 @@ const AppProvider = ({ children }) => {
 
         Articles,
         Projects,
+        Messages,
+        handleDeleteProject,
+        handleDeleteArticle,
+        handleDeleteMessage,
       }}
     >
       {children}

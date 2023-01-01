@@ -13,6 +13,10 @@
     @apply font-poppins;
   }
 
+  p {
+    @apply text-[14px];
+  }
+
   button {
     @apply text-white border bg-blue-800 border-blue-800 hover:bg-transparent hover:text-blue-800 rounded-md;
   }
@@ -25,7 +29,7 @@
   justify-content: center;
   align-items: center;
 }
-.f-col {
+.flec {
   display: flex;
   flex-direction: column;
 }
@@ -329,7 +333,7 @@ border: solid 1px #aaa; */
 .adminSidebar {
   width: 20%;
   height: 100vh;
-  background-color: #0d1727;
+  background-color: #f4f5f6;
   display: flex;
   flex-direction: column;
   padding: 20px 10px;
@@ -370,10 +374,10 @@ border: solid 1px #aaa; */
   height: 16px;
 }
 .eachmenu > p {
-  margin-left: 5px;
-  font-size: 15px;
+  margin-left: 7px;
+  font-size: 14px;
   font-weight: 600;
-  color: #1f98d1;
+  color: #162534;
 }
 .activemenu {
   background-color: white;
@@ -395,7 +399,7 @@ border: solid 1px #aaa; */
   width: 100%;
   padding: 10px 0;
   margin: -15px 0 0;
-  background-color: #1f98d1;
+  background-color: #162534;
   border: none;
   border-radius: 5px;
   color: white;
@@ -723,8 +727,6 @@ border: solid 1px #aaa; */
   background-color: #1f98d1;
   color: white;
 
-  /* font-weight: 550; */
-  /* width: 140px; */
   border-radius: 5px;
   font-size: 15px;
   letter-spacing: 0.8px;

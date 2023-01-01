@@ -42,7 +42,7 @@ const Login = () => {
                 .then((userCredential) => {
                     const user = userCredential.user;
 
-
+                    localStorage.setItem("isLoggedIn", user);
                     setuser(user)
                     navigate("/admin");
                     setloader(false);
