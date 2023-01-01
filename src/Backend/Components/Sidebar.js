@@ -9,15 +9,10 @@ const Sidebar = () => {
             <h3 className='text-white'>FAJI TOBILOBA </h3>
 
             <div className="menus ">
+
                 <div onClick={() => {
                     pageStateF('default')
                 }} className={pageState === 'default' ? 'activemenu eachmenu ' : 'eachmenu '} >
-                    <img src="svg/dash.svg" alt="" />
-                    <p>Dashboard</p>
-                </div>
-                <div onClick={() => {
-                    pageStateF('home')
-                }} className={pageState === 'home' ? 'activemenu eachmenu ' : 'eachmenu '} >
                     <img src="svg/house.svg" style={{ height: 20 }} alt="" />
                     <p>Home</p>
                 </div>

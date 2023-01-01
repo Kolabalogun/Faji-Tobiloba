@@ -26,7 +26,7 @@ const Navbar = () => {
             let scrollY = window.scrollY;
 
             windowHeightF(scrollY);
-            console.log(windowHeight);
+
         };
 
         window.addEventListener("scroll", watchHeight);

@@ -59,7 +59,7 @@ export const Admin = () => {
 
 
 
-                    pageState === 'home' ? <Home /> :
+                   
                         pageState === 'story' ?
                             <MyStory /> :
 
@@ -70,7 +70,7 @@ export const Admin = () => {
                                         <Settings /> :
                                         pageState === 'message' ?
                                             <Messages /> :
-                                            <Dashboard />
+                                            <Home />
 
                 }
 

@@ -5,12 +5,12 @@ import { Link } from "react-scroll";
 
 import Caption from './Caption'
 
-const Hero = () => {
+const Hero = ({ form }) => {
     return (
         <div id='home' className="w-full bg-rubik h-screen  bg-cover">
             < Navbar />
 
-            <Caption />
+            <Caption form={form} />
 
 
 

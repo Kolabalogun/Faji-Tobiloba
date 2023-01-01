@@ -1,6 +1,10 @@
 import React from 'react'
+import { useGlobalContext } from '../../Function/Context'
 
 const Caption = () => {
+
+    const { homePageDetails } = useGlobalContext()
+
     return (
         <div className='h-[80vh] pt-[80px] grid md:grid-cols-2 grid-cols-1 md:justify-center sm:justify-center  items-center xl:px-[140px] md:px-[80px] px-[80px]'>
 
@@ -11,8 +15,8 @@ const Caption = () => {
                 </div>
 
                 <div className="flex flex-col mt-[-10px]">
-                    <h1 className='font-poppins font-bold lg:text-[2.6rem] md:text-[3.0rem] text-[2.5rem]  text-white'>I'm Faji Tobiloba</h1>
-                    <p className='py-1  text-white'>SU President of the University of Ilorin. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum assumenda impedit autem exercitationem nam nobis quis? Veritatis numquam libero nisi.</p>
+                    <h1 className='font-poppins font-bold lg:text-[2.6rem] md:text-[3.0rem] text-[2.5rem]  text-white'>{homePageDetails && homePageDetails.title}</h1>
+                    <p className='py-1  text-white'>{homePageDetails && homePageDetails.caption}</p>
                 </div>
 
                 <div className="flex my-2">
