@@ -3,6 +3,7 @@ import Blog from "../../Components/Article/Blog";
 import Footer from "../../Components/Others/Footer";
 import Loader from "../../Components/Others/Loader";
 import Navbar from "../../Components/Others/Navbar";
+import ScrolltoTop from "../../Components/Others/ScrolltoTop";
 import { useGlobalContext } from "../../Function/Context";
 import AnimatedPage from "../../Utils/AnimatedPage";
 
@@ -36,6 +37,7 @@ const Articles = () => {
           <Blog />
 
           <Footer />
+          <ScrolltoTop />
         </>
       )}
     </AnimatedPage>

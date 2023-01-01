@@ -9,6 +9,7 @@ import Footer from "../Others/Footer";
 import Loader from "../Others/Loader";
 
 import Navbar from "../Others/Navbar";
+import ScrolltoTop from "../Others/ScrolltoTop";
 import Comment from "./Comment";
 
 const BlogDetails = () => {
@@ -83,6 +84,7 @@ const BlogDetails = () => {
             </div>
           ))}
           <Footer />
+          <ScrolltoTop />
         </>
       )}
     </AnimatedPage>

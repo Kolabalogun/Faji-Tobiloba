@@ -110,37 +110,6 @@
   scale: 1;
 }
 
-/* Loader  */
-.loader-wrapper {
-  width: 50px;
-  height: 50px;
-}
-.loader {
-  width: 100%;
-  height: 100%;
-  border: 3px solid #162534;
-  border-top-color: #2cd9ff;
-  border-bottom-color: #7effb2;
-  border-radius: 50%;
-  animation: rotate 5s linear infinite;
-}
-.loader--inner {
-  border-top-color: #7effb2;
-  border-bottom-color: #2cd9ff;
-  animation-duration: 2.5s;
-}
-@keyframes rotate {
-  0% {
-    transform: scale(1) rotate(360deg);
-  }
-  50% {
-    transform: scale(0.8) rotate(-360deg);
-  }
-  100% {
-    transform: scale(1) rotate(360deg);
-  }
-}
-
 /* scroll  bar  */
 
 ::-webkit-scrollbar {
@@ -247,15 +216,7 @@
   width: 100%;
   height: 100vh;
   background: #0d1727;
-  /****** center box
-width: 300px;
-height: 300px;
-border: solid 1px #aaa; */
 }
-
-/* body {
-  background: #202628;
-} */
 
 .loader-circle-39 {
   display: inline-block;
@@ -329,9 +290,6 @@ border: solid 1px #aaa; */
 
 /* Admin Dashboard  */
 
-.admin {
-}
-
 .adminSidebar {
   width: 20%;
   height: 100vh;
@@ -385,371 +343,26 @@ border: solid 1px #aaa; */
   background-color: white;
 }
 
-.foot {
-  display: flex;
-  justify-content: end;
-  flex-direction: column;
-  margin-top: -15px;
-}
+/* scroll to top */
+.scroll {
+  position: fixed;
 
-.sidebarImg > img {
-  height: 100%;
-  width: 100%;
-}
-
-.foot > button {
-  width: 100%;
-  padding: 10px 0;
-  margin: -15px 0 0;
-  background-color: #162534;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-weight: 600;
-  font-size: 15px;
-  font-family: inherit;
-}
-
-.aa {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: 1;
-}
-
-.bbv {
-  flex: 1;
-  width: 700px;
-}
-.topauthnav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.welo {
-  font-size: 17px;
-  font-weight: 600;
-}
-
-.eng {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-.eng > img {
-  height: 15px;
-}
-.eng > p {
-  font-size: 15px;
-  margin-left: 10px;
-  color: red;
-}
-
-.overview {
-  margin: 40px 0;
-}
-.overview > h2 {
-  color: rgb(24, 41, 60);
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.boxx {
-  border-radius: 15px;
-  padding: 50px 40px;
-  display: flex;
-  background-color: #1f98d1;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-}
-.leftboxx {
-  display: flex;
-  flex-direction: column;
-  color: white;
-}
-.leftboxx > h1 {
-  color: white;
-}
-.leftboxx > p {
-}
-
-.bb {
-  display: flex;
-  margin: 50px 0;
-}
-
-.eachbb {
-  display: flex;
-  margin-right: 20px;
-  color: white;
-}
-.eachbb > img {
-  height: 30px;
-}
-
-.conbb {
-  display: flex;
-  flex-direction: column;
-  margin-left: 5px;
-}
-.conbb > p {
-  font-size: 14px;
-  font-weight: 600;
-}
-.conbb > span {
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.rightboxx {
-  position: absolute;
-  right: 10px;
-}
-.rightboxx > img {
-  height: 320px;
-  width: 300px;
-}
-
-.dashfooter {
-  display: flex;
-}
-.popularcourse {
-}
-.popularcourse > h2 {
-  color: rgb(24, 41, 60);
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.eachCourse {
-  display: flex;
-  align-items: center;
-  margin: 10px 0;
-  align-items: center;
-}
-.courselogo {
+  right: 15px;
+  bottom: 15px;
+  z-index: 99999;
+  background: rgb(47, 171, 205);
+  width: 35px;
   height: 35px;
-}
-.courselogo > img {
-  height: 100%;
-}
-
-.courseName {
-  flex: 1;
-  flex-direction: column;
-  margin: 0 10px;
-}
-.courseName p {
-  font-size: 14px;
-  color: rgb(63, 62, 62);
-  font-weight: 600;
-}
-.courseName span {
-  font-size: 13px;
-  color: rgb(194, 194, 194);
-}
-
-.vc {
-  font-size: 12px;
-  padding: 5px 7px;
-  background-color: rgba(15, 133, 113, 0.196);
-  border-radius: 30px;
-  border: none;
-  color: rgb(24, 41, 60);
-  cursor: pointer;
-}
-
-.lecturer {
-  margin-left: 50px;
-  flex: 1;
-}
-
-.msgBody {
-  margin: 40px 0;
-}
-.msglogo {
-  height: 25px;
-}
-
-.ppp {
-  display: flex;
-  width: 100%;
-}
-
-.ddd {
-  flex: 1;
-}
-.fff {
-  flex: 2;
-  margin-left: 20px;
-  border: 1px solid #1f98d1;
-}
-
-.ddfg {
-  margin: 0;
-}
-
-.context {
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-}
-
-.cccs {
-  max-width: 100%;
-  width: 100%;
-
-  margin: 0px 0;
-  padding: 20px;
-  box-shadow: none;
-}
-
-/* Externalll */
-
-.horizonBox {
-  border: none;
-  border-radius: 5px;
-  box-shadow: 0px 0px 7px 1px rgba(221, 208, 200, 0.765);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  width: 100%;
-  flex-direction: row;
-  margin: 10px 0;
-}
-
-.emptycrt {
+  border-radius: 4px;
+  transition: all 0.4s;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 380px;
-  width: 100%;
-  flex-direction: column;
-  padding: 20px;
-  background-color: rgba(221, 208, 200, 0.116);
+  cursor: pointer;
 }
 
-.emptycrt > img {
-  height: 100%;
-}
-
-.leftHorizonBox {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logoCart {
+.scroll > img {
   height: 20px;
-  margin: 0 25px 0 0;
-}
-.logoCart > img {
-  height: 100%;
-}
-
-.cartContent {
-  display: flex;
-  flex-direction: column;
-}
-
-.topCartContent {
-  display: flex;
-  align-items: center;
-}
-
-.topCartContent > p {
-  padding-right: 8px;
-  font-size: 15px;
-  color: #34343395;
-  font-weight: 600;
-}
-
-.topCartContent > img {
-  height: 17px;
-}
-
-.bottomCartContent {
-  display: flex;
-  align-items: center;
-}
-.bottomCartContent > p {
-  font-size: 14px;
-  padding: 10px 0 0;
-  font-weight: 500;
-}
-
-.rightHorizonBox > button {
-  padding: 5px 10px;
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-.cartForm {
-  padding: 20px 0;
-  margin-top: 60px;
-}
-
-.inputrow {
-  display: flex;
-
-  width: 100%;
-  margin: 20px 0;
-}
-
-.pn {
-  margin-left: 10px;
-}
-
-.cartInput {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-.cartInput > label {
-  font-size: 12px;
-}
-.cartInput > input {
-  background-color: white;
-  border-radius: 5px;
-  border: 1px solid rgba(221, 208, 200, 0.765);
-  padding: 10px 5px;
-  outline: none;
-  width: 100%;
-}
-
-.storeBtn {
-  margin-top: 30px;
-  padding: 12px 10px;
-  background-color: #1f98d1;
-  color: white;
-
-  border-radius: 5px;
-  font-size: 15px;
-  letter-spacing: 0.8px;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.courseDiv {
-  display: flex;
-  margin-top: 30px;
-}
-
-.leftCourse {
-  margin-top: 30px;
-}
-
-.deletedash {
-  color: white;
-  margin-left: 5px;
-  background-color: rgb(241, 71, 71);
+  color: #fff;
+  line-height: 0;
 }

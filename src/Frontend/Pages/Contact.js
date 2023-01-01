@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 import Footer from "../../Components/Others/Footer";
 import Loader from "../../Components/Others/Loader";
 import Navbar from "../../Components/Others/Navbar";
+import ScrolltoTop from "../../Components/Others/ScrolltoTop";
 import { useGlobalContext } from "../../Function/Context";
 import { db } from "../../Utils/Firebase";
 
@@ -158,6 +159,7 @@ const Contact = () => {
           </div>
 
           <Footer />
+          <ScrolltoTop />
         </>
       )}
     </>

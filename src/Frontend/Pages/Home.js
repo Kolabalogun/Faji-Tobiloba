@@ -6,6 +6,7 @@ import AnimatedPage from '../../Utils/AnimatedPage'
 import { useGlobalContext } from '../../Function/Context'
 
 import Loader from '../../Components/Others/Loader'
+import ScrolltoTop from '../../Components/Others/ScrolltoTop'
 
 const Home = () => {
     const { loader, getHomepageDetails, homePageDetails } = useGlobalContext()
@@ -35,7 +36,8 @@ const Home = () => {
                 loader || !homePageDetails ? <Loader /> :
                     <>  <Hero />
                         <Note />
-                        <Footer /></>
+                        <Footer />
+                        <ScrolltoTop /></>
             }
 
 
