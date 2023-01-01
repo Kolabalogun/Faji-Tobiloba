@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useGlobalContext } from "../../Function/Context";
 
 const Caption = () => {
@@ -22,12 +23,16 @@ const Caption = () => {
         </div>
 
         <div className="flex my-2">
-          <button className="py-[0.825rem] px-[2.025rem]  transition-colors duration-200 delay-100 border-blue-800 border font-[600] ">
-            Contact me
-          </button>
-          <button className="py-[0.825rem] px-[2.025rem] transition-colors duration-200 delay-100  border-blue-800 border-[1px] font-[600] bg-transparent mx-2  hover:bg-blue-800 text-white hover:text-white">
-            My Story
-          </button>
+          <Link to="/contact">
+            <button className="py-[0.825rem] px-[2.025rem]  transition-colors duration-200 delay-100 border-blue-800 border font-[600] ">
+              Contact me
+            </button>
+          </Link>
+          <Link to="/about">
+            <button className="py-[0.825rem] px-[2.025rem] transition-colors duration-200 delay-100  border-blue-800 border-[1px] font-[600] bg-transparent mx-2  hover:bg-blue-800 text-white hover:text-white">
+              My Story
+            </button>
+          </Link>
         </div>
       </div>
 

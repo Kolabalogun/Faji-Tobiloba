@@ -12,7 +12,7 @@ const Blog = () => {
   });
 
   return (
-    <div className="p-[100px] grid md:grid-cols-2 gap-4 grid-cols-1">
+    <div className="lg:px-[50px] py-[100px]  px-[20px] grid md:grid-cols-2 gap-4 grid-cols-1">
       {points?.map((article, index) => (
         <div
           key={index}
@@ -23,13 +23,13 @@ const Blog = () => {
               <img
                 src={article?.imgUrl}
                 alt="blogImg"
-                className="w-[100%] h-[400px] "
+                className="w-[100%] h-[300px]  sm:h-[400px]"
               />
             </div>
           </Link>
 
           <div className="border">
-            <div className=" p-[50px] sm-p-[20px]">
+            <div className=" sm:p-[50px] p-[10px] py-[50px]">
               <div className="text-gray-700 text-[12px] mb-[5px] font-rubik uppercase ">
                 {Articles.length > 0 && (
                   <span>
@@ -37,7 +37,7 @@ const Blog = () => {
                   </span>
                 )}
                 &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-                <span>
+                <span className="hidden sm:flex">
                   <span className="text-medium-gray ">{article?.author}</span>
                 </span>
               </div>

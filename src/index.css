@@ -32,6 +32,8 @@
 .flec {
   display: flex;
   flex-direction: column;
+
+  /* background-position: c; */
 }
 
 /* Mouuse  CSS */

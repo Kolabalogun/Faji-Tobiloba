@@ -27,8 +27,19 @@ const Sidebar = () => {
             pageState === "story" ? "activemenu eachmenu " : "eachmenu "
           }
         >
-          <img src="svg/message-solid.svg" alt="" />
+          <img src="svg/book.svg" alt="" />
           <p>My Story</p>
+        </div>
+        <div
+          onClick={() => {
+            pageStateF("quote");
+          }}
+          className={
+            pageState === "quote" ? "activemenu eachmenu " : "eachmenu "
+          }
+        >
+          <img src="svg/message-solid.svg" alt="" />
+          <p>Quotes</p>
         </div>
         <div
           onClick={() => {

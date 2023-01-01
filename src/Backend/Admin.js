@@ -9,6 +9,7 @@ import MyStory from "./Pages/MyStory";
 import Project from "./Pages/Project";
 import Settings from "./Pages/Settings";
 import Messages from "./Pages/Messages";
+import Quote from "./Pages/Quote";
 
 export const Admin = () => {
   const { pageState, navigate } = useGlobalContext();
@@ -40,6 +41,8 @@ export const Admin = () => {
           <MyStory />
         ) : pageState === "project" ? (
           <Project />
+        ) : pageState === "quote" ? (
+          <Quote />
         ) : pageState === "article" ? (
           <Articles />
         ) : pageState === "settings" ? (

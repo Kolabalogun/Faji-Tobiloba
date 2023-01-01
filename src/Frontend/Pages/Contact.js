@@ -67,13 +67,13 @@ const Contact = () => {
       ) : (
         <>
           <div
-            className="bg-cover h-[70vh] flex flex-col justify-center items-center"
+            className="bg-cover h-[70vh] flex flex-col  justify-center items-center"
             style={{ backgroundImage: "url('wave.svg')" }}
           >
             <Navbar />
 
             <div className="mt-[-100px] text-center ">
-              <h1 className="text-[55px] leading-[75px] font-bold text-white">
+              <h1 className="text-[55px] leading-[75px] sm:font-bold font-semibold text-white">
                 Contact Me
               </h1>
               <p className="text-white">
@@ -83,19 +83,18 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="flex items-center justify-center px-[400px] text-[14px]">
+          <div className="flex items-center justify-center md:px-[400px]  px-[20px] text-[14px]">
             <p>
-              Feel free to ask / inquire about anything (school, basketball,
-              internships, music, etc). Hoping to be a resource and be of help
-              in your journey in any way possible.
+              Feel free to ask / inquire about anything. Hoping to be a resource
+              and be of help in your journey in any way possible.
               <br /> <br />
               Similarly, please use this form or email directly me if your
               message regards any opportunity.
             </p>
           </div>
 
-          <div className="flex  flex-col  my-[30px] px-[200px] text-[14px]">
-            <div className="grid grid-cols-2 gap-3 my-[10px]">
+          <div className="flex  flex-col  my-[30px] md:px-[200px] px-[20px] text-[14px]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 my-[10px]">
               <input
                 type="text"
                 name="username"
@@ -115,7 +114,7 @@ const Contact = () => {
                 className="border py-[18px] px-[25px] text-[14px] "
               />
             </div>
-            <div className="grid grid-cols-2 gap-3 my-[10px]">
+            <div className="grid grid-cols-1 sm:grid-cols-2  gap-3 my-[10px]">
               <input
                 type="number"
                 name="phone"

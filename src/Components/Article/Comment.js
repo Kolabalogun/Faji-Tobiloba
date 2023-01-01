@@ -74,7 +74,7 @@ const Comment = ({ article }) => {
         return (
           <div
             key={index}
-            className="py-[50px] w-[800px] border-b-[#ededed] border-b-[1px]"
+            className="py-[50px] lg:px-[130px]  px-[20px] w-full border-b-[#ededed] border-b-[1px]"
           >
             <div>
               <div className="flec">
@@ -199,9 +199,9 @@ const Comment = ({ article }) => {
   };
 
   return (
-    <div className="mt-[80px] ">
-      <div className=" flex items-center justify-center flex-col">
-        <div className="flex items-center">
+    <div className="">
+      <div className=" flexjustify-center flex-col">
+        <div className="flex items-center justify-center">
           <div className="w-9 h-[.8px] bg-gray-300"></div>
           <h1 className="px-5 text-gray-900 uppercase text-xs leading-5">
             {article.comment.length} Comments
@@ -224,8 +224,8 @@ const Comment = ({ article }) => {
       )}
 
       {!openReply && (
-        <div className="flex flex-col justify-center items-center py-[130px] bg-[#f7f7f7]">
-          <div className="flex items-center">
+        <div className="flex flex-col justify-center lg:px-[130px]  px-[20px]  py-[130px] bg-[#f7f7f7] ">
+          <div className="flex items-center justify-center">
             <div className="w-9 h-[.8px] bg-gray-300"></div>
             <h1 className="px-5 text-gray-900 uppercase text-xs leading-5">
               leave a comment
@@ -234,7 +234,7 @@ const Comment = ({ article }) => {
           </div>
 
           <div className="flex  flex-col  mt-[30px]  text-[14px]">
-            <div className="grid grid-cols-2 gap-3 my-[10px]">
+            <div className="grid grid-cols-1  md:grid-cols-2 gap-3 my-[10px]">
               <input
                 type="text"
                 name="name"
@@ -242,7 +242,7 @@ const Comment = ({ article }) => {
                 value={comment.name}
                 placeholder="Your name...*"
                 required
-                className="border w-[400px] py-[18px] px-[25px] text-[14px] "
+                className="border   py-[18px] px-[25px] text-[14px] "
               />
               <input
                 type="email"
@@ -251,7 +251,7 @@ const Comment = ({ article }) => {
                 value={comment.email}
                 placeholder="Your Email*"
                 required
-                className="border w-[400px] py-[18px] px-[25px] text-[14px] "
+                className="border   py-[18px] px-[25px] text-[14px] "
               />
             </div>
 

@@ -108,7 +108,7 @@ const Navbar = () => {
           >
             Articles
           </Link>
-          <Link
+          {/* <Link
             activeClass="active"
             to="/project"
             spy={true}
@@ -126,7 +126,7 @@ const Navbar = () => {
             }}
           >
             Projects
-          </Link>
+          </Link> */}
           <Link
             activeClass="active"
             to="/contact"
@@ -218,7 +218,7 @@ const Navbar = () => {
               Article
             </li>
           </Link>
-          <Link
+          {/* <Link
             activeClass="active"
             to="/projects"
             spy={true}
@@ -234,7 +234,7 @@ const Navbar = () => {
             <li className="border-b-2 font-rubik text-black border-zinc-300 w-full cursor-pointer">
               Project
             </li>
-          </Link>
+          </Link> */}
           <Link
             activeClass="active"
             to="/contact"

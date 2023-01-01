@@ -88,6 +88,52 @@ const AppProvider = ({ children }) => {
     setloader(false);
   };
 
+  //   Quotes
+
+  const [Quotes, QuotesF] = useState([]);
+
+  useEffect(() => {
+    setloader(true);
+    const unsub = onSnapshot(
+      collection(db, "Quotes"),
+
+      (snapshot) => {
+        let list = [];
+
+        snapshot.docs.forEach((doc) => {
+          list.push({ id: doc.id, ...doc.data() });
+        });
+
+        if (!list || list.length === 0) {
+        } else {
+          QuotesF(list);
+
+          setloader(false);
+        }
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+
+    return () => {
+      unsub();
+    };
+  }, []);
+
+  const handleDeleteQuote = async (id) => {
+    if (window.confirm("Are you sure you want to delete this Quote?")) {
+      try {
+        setloader(true);
+        await deleteDoc(doc(db, "Quotes", id));
+        setloader(false);
+        toast.error("Quote deleted");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  };
+
   //   Articles
 
   const [Articles, ArticlesF] = useState([]);
@@ -127,7 +173,7 @@ const AppProvider = ({ children }) => {
         setloader(true);
         await deleteDoc(doc(db, "Articles", id));
         setloader(false);
-        toast.error("Project deleted");
+        toast.error("Article deleted");
       } catch (error) {
         console.log(error);
       }
@@ -251,9 +297,11 @@ const AppProvider = ({ children }) => {
         Articles,
         Projects,
         Messages,
+        Quotes,
         handleDeleteProject,
         handleDeleteArticle,
         handleDeleteMessage,
+        handleDeleteQuote,
       }}
     >
       {children}

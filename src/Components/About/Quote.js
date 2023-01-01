@@ -1,16 +1,20 @@
 import React, { useEffect } from "react";
-import QuoteArray from "./QuoteArray";
+import { useGlobalContext } from "../../Function/Context";
+import Quotes from "./QuoteArray";
 
 const Quote = () => {
+  const { Quotes } = useGlobalContext();
+
   const [index, indexF] = React.useState(0);
-  const { author, details } = QuoteArray[index];
+
+  const { author, Quote } = Quotes[index];
 
   function checkNumber(number) {
-    if (number > QuoteArray.length - 1) {
+    if (number > Quotes.length - 1) {
       return 0;
     }
     if (number < 0) {
-      return QuoteArray.length - 1;
+      return Quotes.length - 1;
     }
     return number;
   }
@@ -48,8 +52,11 @@ const Quote = () => {
         key={index}
         className=" w-full items-center justify-center flex-col px-1 md:px-7 text-center"
       >
-        {details.map((d, index) => (
-          <h1 className="font-bold text-[20px] xmd:text-[40px] md:text-[30px] text-center ">
+        {Quote.map((d, index) => (
+          <h1
+            key={index}
+            className="font-bold text-[20px] xmd:text-[40px] md:text-[30px] text-center "
+          >
             "{d}"
           </h1>
         ))}

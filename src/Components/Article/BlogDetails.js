@@ -1,6 +1,7 @@
 import { doc, getDoc } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import { Link } from "react-scroll";
 import { useGlobalContext } from "../../Function/Context";
 import AnimatedPage from "../../Utils/AnimatedPage";
 import { db } from "../../Utils/Firebase";
@@ -39,16 +40,16 @@ const BlogDetails = () => {
       ) : (
         <>
           {form?.map((article, i) => (
-            <div key={i}>
+            <div key={i} className="relative">
               <div className="bg-black absolute opacity-60 z-1 h-[80vh] w-full"></div>
 
               <div
-                className="bg-rubik  h-[80vh] w-full justify-center items-center flex  bg-no-repeat bg-cover flex-col "
+                className="bg-rubik  h-[80vh] w-full justify-center  items-center flex  bg-no-repeat bg-cover bg-center flex-col "
                 style={{ backgroundImage: `url(${article?.imgUrl})` }}
               >
                 <Navbar />
 
-                <h1 className="text-white font-poppins z-10 bg-transparent text-[50px] px-[100px]  text-5xl font-semibold mb-2">
+                <h1 className="text-white font-poppins z-10 bg-transparent text-[50px] lg:px-[100px]  px-[20px]  text-5xl font-semibold mb-2">
                   {article?.title}
                 </h1>
 
@@ -57,10 +58,23 @@ const BlogDetails = () => {
                   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;by{" "}
                   <span className="text-white">{article?.author}</span>
                 </span>
+
+                <Link
+                  activeClass="active"
+                  to="details"
+                  spy={true}
+                  smooth={true}
+                  offset={-80}
+                  duration={800}
+                  className=" bg-transparent z-10 mt-5 cursor-pointer hover:scale-[0.9]  bottom-5 left-[50%] transition-all duration-200 delay-100  mouse"
+                >
+                  <span className="mouse-wheel"></span>
+                </Link>
               </div>
 
               <div
-                className=" p-[130px] text-[14px]"
+                id="details"
+                className=" py-[130px]  lg:px-[130px]  px-[20px] text-[14px]"
                 dangerouslySetInnerHTML={{
                   __html: article?.description,
                 }}
