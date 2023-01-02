@@ -45,7 +45,7 @@ const Navbar = () => {
             style={tcolo}
             className="text-3xl font-bold mr-5  font-rufina sm:text-4xl text-white"
           >
-            TFT.
+            FTB.
           </h1>
         </div>
 
