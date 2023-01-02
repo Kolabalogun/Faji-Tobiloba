@@ -12,7 +12,7 @@ const Blog = () => {
   });
 
   return (
-    <div className="lg:px-[50px] py-[100px]  px-[20px] grid md:grid-cols-2 gap-4 grid-cols-1">
+    <div className="lg:px-[100px] py-[100px]  px-[20px] xmd:px-[100px] grid md:grid-cols-2 gap-4 grid-cols-1">
       {points?.map((article, index) => (
         <div
           key={index}
@@ -23,7 +23,7 @@ const Blog = () => {
               <img
                 src={article?.imgUrl}
                 alt="blogImg"
-                className="w-[100%] h-[300px]  sm:h-[400px] xmd:h-[500px]"
+                className="w-[100%] h-[300px]  sm:h-[400px] xmd:h-[450px]"
               />
             </div>
           </Link>

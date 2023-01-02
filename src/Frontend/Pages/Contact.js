@@ -45,10 +45,6 @@ const Contact = () => {
           ...form,
 
           timestamp: serverTimestamp(),
-          author: user.displayName,
-          userId: user.uid,
-          dateId: dateId,
-          comment: [],
         });
         setloader(false);
         toast.success("Message Sent");
