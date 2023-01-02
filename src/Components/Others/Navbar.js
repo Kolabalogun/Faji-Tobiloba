@@ -36,7 +36,7 @@ const Navbar = () => {
   return (
     <div
       style={bg}
-      className="w-full h-[80px] z-10  fixed  top-0 bg-transparent transition-all xl:px-[30px] px-[10px] shadow-sm
+      className="w-full h-[80px] z-100  fixed  top-0 bg-transparent transition-all xl:px-[30px] px-[10px] shadow-sm
 "
     >
       <div className="px-2 flex justify-between items-center w-full h-full">

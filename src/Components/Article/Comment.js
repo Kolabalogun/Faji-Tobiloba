@@ -48,7 +48,7 @@ const Comment = ({ article }) => {
     } else {
       return toast.error("All fields must be filled");
     }
-    window.location.reload();
+    // window.location.reload();
   };
 
   // #=============================================#
@@ -192,7 +192,7 @@ const Comment = ({ article }) => {
       } catch (err) {
         console.log(err);
       }
-      window.location.reload();
+      // window.location.reload();
     } else {
       return toast.error("All fields must be filled");
     }
