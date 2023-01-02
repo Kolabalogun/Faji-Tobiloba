@@ -23,7 +23,7 @@ const Blog = () => {
               <img
                 src={article?.imgUrl}
                 alt="blogImg"
-                className="w-[100%] h-[300px]  sm:h-[400px]"
+                className="w-[100%] h-[300px]  sm:h-[400px] xmd:h-[500px]"
               />
             </div>
           </Link>

@@ -151,13 +151,13 @@ const Navbar = () => {
         <div className="md:hidden cursor-pointer" onClick={handleNavClick}>
           {!nav ? (
             <img
-              src={windowHeight > 0 ? "menu.png" : "menu.svg"}
+              src={windowHeight > 0 ? "/menu.png" : "/menu.svg"}
               className="w-8 h-10 fill-white"
               alt="menu"
             />
           ) : (
             <img
-              src={windowHeight > 0 ? "closeb.svg" : "close.svg"}
+              src={windowHeight > 0 ? "/closeb.svg" : "/close.svg"}
               className="w-6 h-8 fill-white"
               alt="close"
             />

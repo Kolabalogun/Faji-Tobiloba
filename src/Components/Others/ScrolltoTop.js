@@ -27,7 +27,7 @@ const ScrolltoTop = () => {
 
   return (
     <div onClick={scrollToTop} className="scroll" style={vis}>
-      <img src="svg/aup.svg" alt="" />
+      <img src="/svg/aup.svg" alt="" />
     </div>
   );
 };
