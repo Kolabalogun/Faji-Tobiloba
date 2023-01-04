@@ -35,7 +35,7 @@ const Messages = () => {
 
             <div className="flex flex-col">
               {points?.map((msg, i) => (
-                <div key={i} className="border mb-4">
+                <div key={msg.dateId} className="border mb-4">
                   <div className=" p-[50px] sm-p-[20px]">
                     <div className="text-gray-700 text-[12px] mb-[5px] font-rubik uppercase ">
                       <span>
