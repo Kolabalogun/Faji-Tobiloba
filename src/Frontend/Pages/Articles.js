@@ -6,9 +6,10 @@ import Navbar from "../../Components/Others/Navbar";
 import ScrolltoTop from "../../Components/Others/ScrolltoTop";
 import { useGlobalContext } from "../../Function/Context";
 import AnimatedPage from "../../Utils/AnimatedPage";
+import Newletter from "./Newletter";
 
 const Articles = () => {
-  const { loader, Articles } = useGlobalContext();
+  const { loader, Articles, showNewsletter } = useGlobalContext();
 
   useEffect(() => {
     window.scroll(0, 0);
@@ -16,6 +17,9 @@ const Articles = () => {
 
   return (
     <AnimatedPage>
+         {!showNewsletter ? (
+        <>
+
       {loader || Articles.length < 1 ? (
         <Loader />
       ) : (
@@ -39,6 +43,12 @@ const Articles = () => {
           <Footer />
           <ScrolltoTop />
         </>
+
+      )}
+
+</>
+      ) : (
+        <Newletter />
       )}
     </AnimatedPage>
   );

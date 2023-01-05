@@ -1,20 +1,27 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useGlobalContext } from "../../Function/Context";
-import Quotes from "./QuoteArray";
 
 const Quote = () => {
   const { Quotes } = useGlobalContext();
 
+  const [quot, quotF] = useState([{ author: "", Quote: [] }]);
+
+  useEffect(() => {
+    if (Quotes.length > 0) {
+      quotF(Quotes);
+    }
+  }, []);
+
   const [index, indexF] = React.useState(0);
 
-  const { author, Quote } = Quotes[index];
+  const { author, Quote } = quot[index];
 
   function checkNumber(number) {
-    if (number > Quotes.length - 1) {
+    if (number > quot.length - 1) {
       return 0;
     }
     if (number < 0) {
-      return Quotes.length - 1;
+      return quot.length - 1;
     }
     return number;
   }

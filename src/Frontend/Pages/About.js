@@ -7,9 +7,11 @@ import Navbar from "../../Components/Others/Navbar";
 import ScrolltoTop from "../../Components/Others/ScrolltoTop";
 import { useGlobalContext } from "../../Function/Context";
 import AnimatedPage from "../../Utils/AnimatedPage";
+import Newletter from "./Newletter";
 
 const About = () => {
-  const { loader, getMyStoryDetails, MyStoryDetails } = useGlobalContext();
+  const { loader, getMyStoryDetails, MyStoryDetails, showNewsletter } =
+    useGlobalContext();
 
   useEffect(() => {
     window.scroll(0, 0);
@@ -18,16 +20,22 @@ const About = () => {
 
   return (
     <AnimatedPage>
-      {loader || !MyStoryDetails ? (
-        <Loader />
+      {!showNewsletter ? (
+        <>
+          {loader || !MyStoryDetails ? (
+            <Loader />
+          ) : (
+            <div className="bg-rubik  h-full w-full">
+              <Navbar />
+              <Story />
+              <Quote />
+              <Footer />
+              <ScrolltoTop />
+            </div>
+          )}
+        </>
       ) : (
-        <div className="bg-rubik  h-full w-full">
-          <Navbar />
-          <Story />
-          <Quote />
-          <Footer />
-          <ScrolltoTop />
-        </div>
+        <Newletter />
       )}
     </AnimatedPage>
   );
