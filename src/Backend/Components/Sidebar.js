@@ -76,6 +76,17 @@ const Sidebar = () => {
         </div>
         <div
           onClick={() => {
+            pageStateF("Newsletter");
+          }}
+          className={
+            pageState === "Newsletter" ? "activemenu eachmenu " : "eachmenu "
+          }
+        >
+          <img src="svg/db.svg" alt="" />
+          <p>Newsletters</p>
+        </div>
+        <div
+          onClick={() => {
             pageStateF("settings");
           }}
           className={

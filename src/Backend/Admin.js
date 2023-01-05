@@ -10,6 +10,7 @@ import Project from "./Pages/Project";
 import Settings from "./Pages/Settings";
 import Messages from "./Pages/Messages";
 import Quote from "./Pages/Quote";
+import Newsletters from "./Pages/Newsletters";
 
 export const Admin = () => {
   const { pageState, navigate } = useGlobalContext();
@@ -49,6 +50,8 @@ export const Admin = () => {
           <Settings />
         ) : pageState === "message" ? (
           <Messages />
+        ) : pageState === "Newsletter" ? (
+          <Newsletters />
         ) : (
           <Home />
         )}

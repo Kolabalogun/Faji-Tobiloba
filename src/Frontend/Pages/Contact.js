@@ -54,6 +54,9 @@ const Contact = () => {
 
           timestamp: serverTimestamp(),
         });
+        await addDoc(collection(db, "Newsletter"), {
+          email: email,
+        });
         setloader(false);
         toast.success("Message Sent");
       } catch (error) {

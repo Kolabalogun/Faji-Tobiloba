@@ -303,7 +303,7 @@ const AppProvider = ({ children }) => {
   }, []);
 
   const handleDeleteNewsletter = async (id) => {
-    if (window.confirm("Are you sure you want to delete this Enail?")) {
+    if (window.confirm("Are you sure you want to delete this Email?")) {
       try {
         setloader(true);
         await deleteDoc(doc(db, "Newsletter", id));
