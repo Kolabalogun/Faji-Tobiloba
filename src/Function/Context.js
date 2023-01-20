@@ -323,7 +323,7 @@ const AppProvider = ({ children }) => {
       if (!newsletter) {
         setshowNewsletter(true);
       }
-    }, 3000);
+    }, 10000);
 
     return () => {
       clearTimeout(timeout);
