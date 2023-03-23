@@ -366,3 +366,276 @@
   color: #fff;
   line-height: 0;
 }
+
+.image-grid div {
+  width: 25%;
+  height: 240px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image01 {
+  background-image: url("../public/faji\ \(10\).jpg");
+}
+.image02 {
+  background-image: url("../public/faji\ \(11\).jpg");
+}
+.image03 {
+  background-image: url("../public/faji\ \(12\).jpg");
+}
+.image04 {
+  background-image: url("../public/faji\ \(13\).jpg");
+}
+.image05 {
+  background-image: url("../public/faji\ \(14\).jpg");
+}
+.image06 {
+  background-image: url("../public/faji\ \(15\).jpg");
+}
+.image07 {
+  background-image: url("../public/faji\ \(16\).jpg");
+}
+.image08 {
+  background-image: url("../public/faji\ \(17\).jpg");
+}
+.image09 {
+  background-image: url("../public/faji\ \(18\).jpg");
+}
+.image10 {
+  background-image: url("../public/faji\ \(19\).jpg");
+}
+.image11 {
+  background-image: url("../public/faji\ \(1\).jpg");
+}
+.image12 {
+  background-image: url("../public/faji\ \(2\).jpg");
+}
+.image13 {
+  background-image: url("../public/faji\ \(3\).jpg");
+}
+.image14 {
+  background-image: url("../public/faji\ \(4\).jpg");
+}
+.image15 {
+  background-image: url("../public/faji\ \(5\).jpg");
+}
+.image16 {
+  background-image: url("../public/faji\ \(6\).jpg");
+}
+.image17 {
+  background-image: url("../public/faji\ \(7\).jpg");
+}
+.image18 {
+  background-image: url("../public/faji\ \(8\).jpg");
+}
+.image19 {
+  background-image: url("../public/faji\ \(9\).jpg");
+}
+.image20 {
+  background-image: url("../public/faji\ \(20\).jpg");
+}
+.image21 {
+  background-image: url("../public/faji\ \(21\).jpg");
+}
+.image22 {
+  background-image: url("../public/faji\ \(22\).jpg");
+}
+.image22 {
+  background-image: url("../public/faji\ \(22\).jpg");
+}
+.image23 {
+  background-image: url("../public/faji\ \(23\).jpg");
+}
+.image24 {
+  background-image: url("../public/faji\ \(24\).jpg");
+}
+.image25 {
+  background-image: url("../public/faji\ \(25\).jpg");
+}
+.image26 {
+  background-image: url("../public/faji\ \(26\).jpg");
+}
+.image27 {
+  background-image: url("../public/faji\ \(27\).jpg");
+}
+.image28 {
+  background-image: url("../public/faji\ \(28\).jpg");
+}
+.image29 {
+  background-image: url("../public/faji\ \(29\).jpg");
+}
+.image30 {
+  background-image: url("../public/faji\ \(30\).jpg");
+}
+.image31 {
+  background-image: url("../public/faji\ \(31\).jpg");
+}
+.image32 {
+  background-image: url("../public/faji\ \(32\).jpg");
+}
+.image33 {
+  background-image: url("../public/faji\ \(33\).jpg");
+}
+.image34 {
+  background-image: url("../public/faji\ \(34\).jpg");
+}
+.image35 {
+  background-image: url("../public/faji\ \(35\).jpg");
+}
+.image36 {
+  background-image: url("../public/faji\ \(36\).jpg");
+}
+.image37 {
+  background-image: url("../public/faji\ \(37\).jpg");
+}
+.image38 {
+  background-image: url("../public/faji\ \(38\).jpg");
+}
+.image39 {
+  background-image: url("../public/faji\ \(39\).jpg");
+}
+.image40 {
+  background-image: url("../public/faji\ \(40\).jpg");
+}
+.image41 {
+  background-image: url("../public/faji\ \(41\).jpg");
+}
+.image42 {
+  background-image: url("../public/faji\ \(42\).jpg");
+}
+.image43 {
+  background-image: url("../public/faji\ \(43\).jpg");
+}
+.image44 {
+  background-image: url("../public/faji\ \(44\).jpg");
+}
+.image45 {
+  background-image: url("../public/faji\ \(45\).jpg");
+}
+.image46 {
+  background-image: url("../public/faji\ \(46\).jpg");
+}
+.image47 {
+  background-image: url("../public/faji\ \(47\).jpg");
+}
+.image48 {
+  background-image: url("../public/faji\ \(48\).jpg");
+}
+.image49 {
+  background-image: url("../public/faji\ \(49\).jpg");
+}
+.image50 {
+  background-image: url("../public/faji\ \(50\).jpg");
+}
+.image51 {
+  background-image: url("../public/faji\ \(51\).jpg");
+}
+.image52 {
+  background-image: url("../public/faji\ \(52\).jpg");
+}
+.image53 {
+  background-image: url("../public/faji\ \(53\).jpg");
+}
+.image54 {
+  background-image: url("../public/faji\ \(54\).jpg");
+}
+.image55 {
+  background-image: url("../public/faji\ \(55\).jpg");
+}
+.image56 {
+  background-image: url("../public/faji\ \(56\).jpg");
+}
+.image57 {
+  background-image: url("../public/faji\ \(57\).jpg");
+}
+.image58 {
+  background-image: url("../public/faji\ \(58\).jpg");
+}
+.image59 {
+  background-image: url("../public/faji\ \(59\).jpg");
+}
+.image60 {
+  background-image: url("../public/faji\ \(60\).jpg");
+}
+.image61 {
+  background-image: url("../public/faji\ \(61\).jpg");
+}
+.image62 {
+  background-image: url("../public/faji\ \(62\).jpg");
+}
+.image63 {
+  background-image: url("../public/faji\ \(63\).jpg");
+}
+.image64 {
+  background-image: url("../public/faji\ \(64\).jpg");
+}
+.image65 {
+  background-image: url("../public/faji\ \(65\).jpg");
+}
+.image66 {
+  background-image: url("../public/faji\ \(66\).jpg");
+}
+.image67 {
+  background-image: url("../public/faji\ \(67\).jpg");
+}
+.image68 {
+  background-image: url("../public/faji\ \(68\).jpg");
+}
+.image69 {
+  background-image: url("../public/faji\ \(69\).jpg");
+}
+.image70 {
+  background-image: url("../public/faji\ \(70\).jpg");
+}
+.image71 {
+  background-image: url("../public/faji\ \(71\).jpg");
+}
+.image72 {
+  background-image: url("../public/faji\ \(72\).jpg");
+}
+.image73 {
+  background-image: url("../public/faji\ \(73\).jpg");
+}
+.image74 {
+  background-image: url("../public/faji\ \(74\).jpg");
+}
+.image75 {
+  background-image: url("../public/faji\ \(75\).jpg");
+}
+.image76 {
+  background-image: url("../public/faji\ \(76\).jpg");
+}
+.image77 {
+  background-image: url("../public/faji\ \(77\).jpg");
+}
+.image78 {
+  background-image: url("../public/faji\ \(78\).jpg");
+}
+.image79 {
+  background-image: url("../public/faji\ \(79\).jpg");
+}
+.image80 {
+  background-image: url("../public/faji\ \(80\).jpg");
+}
+.image81 {
+  background-image: url("../public/faji\ \(81\).jpg");
+}
+.image82 {
+  background-image: url("../public/faji\ \(82\).jpg");
+}
+
+@media screen and (max-width: 500px) {
+  .image-grid {
+    flex-direction: column;
+    flex-wrap: no-wrap;
+  }
+  .image-grid div {
+    width: 100%;
+  }
+}

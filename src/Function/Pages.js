@@ -13,6 +13,7 @@ import BlogDetails from "../Components/Article/BlogDetails";
 import Login from "../Auth/Login";
 import { useGlobalContext } from "./Context";
 import { Admin } from "../Backend/Admin";
+import Gallery from "../Frontend/Pages/Gallery";
 
 const Pages = () => {
   const { user } = useGlobalContext();
@@ -28,6 +29,7 @@ const Pages = () => {
         <Route path="/articles" element={<Articles />} />
         <Route path="/article/:id" element={<BlogDetails />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/gallery" element={<Gallery />} />
 
         <Route path="*" element={<NotFound />} />
 

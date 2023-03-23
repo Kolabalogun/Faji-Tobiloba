@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { useGlobalContext } from "../../Function/Context";
 
-const Navbar = () => {
+const Navbar = ({ galleryBg }) => {
   const { navigate } = useGlobalContext();
   const [nav, setnav] = useState(false);
 
@@ -35,9 +35,11 @@ const Navbar = () => {
 
   return (
     <div
-      style={bg}
-      className="w-full h-[80px] z-[1000]  fixed  top-0 bg-transparent transition-all xl:px-[30px] px-[10px] shadow-sm
-"
+      className={`w-full h-[80px] z-[1000]  fixed ${
+        windowHeight > 0 ? "bg-white" : "bg-transparent"
+      } top-0 bg-transparent transition-all xl:px-[30px] px-[10px] shadow-sm ${
+        galleryBg && "bg-[#0d1727]"
+      }`}
     >
       <div className="px-2 flex justify-between items-center w-full h-full">
         <div className="flex items-center ">
@@ -122,10 +124,10 @@ const Navbar = () => {
                 : "font-rubik text-[14px] cursor-pointer  border-b-zinc-300 py-2 link m-4 text-white  "
             }
             onClick={() => {
-              navigate("/projects");
+              navigate("/gallery");
             }}
           >
-            Gallery1
+            Gallery
           </Link>
           {/* <Link
             activeClass="active"

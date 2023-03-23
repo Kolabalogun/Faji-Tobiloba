@@ -7,13 +7,13 @@ import { getStorage } from "firebase/storage";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDbsl2G8-PnXYtvrvX5RQJF1yK139NJh-U",
-    authDomain: "fajitobiloba.firebaseapp.com",
-    projectId: "fajitobiloba",
-    storageBucket: "fajitobiloba.appspot.com",
-    messagingSenderId: "544207555609",
-    appId: "1:544207555609:web:e1565e34c911fd864fae88",
-    measurementId: "G-DRRZ02RHTX"
+  apiKey: "AIzaSyDbsl2G8-PnXYtvrvX5RQJF1yK139NJh-U",
+  authDomain: "fajitobiloba.firebaseapp.com",
+  projectId: "fajitobiloba",
+  storageBucket: "fajitobiloba.appspot.com",
+  messagingSenderId: "544207555609",
+  appId: "1:544207555609:web:e1565e34c911fd864fae88",
+  measurementId: "G-DRRZ02RHTX",
 };
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

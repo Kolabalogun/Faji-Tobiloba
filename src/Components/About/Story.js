@@ -1,6 +1,5 @@
 import React from "react";
 import { useGlobalContext } from "../../Function/Context";
-import ScrolltoTop from "../Others/ScrolltoTop";
 
 const Story = () => {
   const { MyStoryDetails } = useGlobalContext();

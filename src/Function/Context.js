@@ -11,6 +11,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { auth, db } from "../Utils/Firebase";
+// import { auth, db } from "./Utils/Firebase";
 
 const AppContext = React.createContext();
 

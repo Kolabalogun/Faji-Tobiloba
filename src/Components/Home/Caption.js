@@ -48,7 +48,7 @@ const Caption = () => {
       </div>
 
       <div className="xmd:flex flex-col hidden w-full ml-[80px]">
-        {/* <img src="fajj.png" className="h-[600px] w-[500px]" alt="" /> */}
+        <img src="fajj.png" className="h-[600px] w-[500px]" alt="" />
       </div>
     </div>
   );
