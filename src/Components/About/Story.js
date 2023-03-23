@@ -103,7 +103,7 @@ const Story = () => {
           </div>
         </div>
       </div>
-      <div className="md:flex flex flex-col lg:ml-[150px] xmd:ml-[50px]  md:ml-[30px]  ml-[20px] mt-[70px]">
+      {/* <div className="md:flex flex flex-col lg:ml-[150px] xmd:ml-[50px]  md:ml-[30px]  ml-[20px] mt-[70px]">
         <div className="flex items-start md:flex-row flex-col">
           <div className="flex items-center md:flex-row flex-col  md:w-[40%] w-full  ">
             <div className="md:w-[200px] md:mb-0 mb-4 w-full  bg-white h-[2px]"></div>
@@ -120,7 +120,7 @@ const Story = () => {
             )}
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

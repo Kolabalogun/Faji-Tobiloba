@@ -17,36 +17,33 @@ const Articles = () => {
 
   return (
     <AnimatedPage>
-         {!showNewsletter ? (
+      {!showNewsletter ? (
         <>
+          {loader || Articles.length < 1 ? (
+            <Loader />
+          ) : (
+            <>
+              <div
+                className="bg-rubik  h-[60vh] sm:h-[50vh] w-full   flex flex-col justify-center "
+                style={{ backgroundImage: "url('aa.svg')" }}
+              >
+                <Navbar />
 
-      {loader || Articles.length < 1 ? (
-        <Loader />
-      ) : (
-        <>
-          <div
-            className="bg-rubik  h-[60vh] sm:h-[50vh] w-full   flex flex-col justify-center "
-            style={{ backgroundImage: "url('aa.svg')" }}
-          >
-            <Navbar />
+                <h1 className="text-white font-poppins text-[50px] lg:px-[100px] px-[20px] sm:font-bold font-semibold">
+                  My Articles
+                </h1>
+                <p className="text-white font-poppins lg:px-[100px] px-[20px]  text-[14px]">
+                  Blog section: ongoing and existing projects.
+                </p>
+              </div>
 
-            <h1 className="text-white font-poppins text-[50px] lg:px-[50px] px-[20px] sm:font-bold font-semibold">
-              My Articles
-            </h1>
-            <p className="text-white font-poppins lg:px-[50px] px-[20px]  text-[14px]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </p>
-          </div>
+              <Blog />
 
-          <Blog />
-
-          <Footer />
-          <ScrolltoTop />
+              <Footer />
+              <ScrolltoTop />
+            </>
+          )}
         </>
-
-      )}
-
-</>
       ) : (
         <Newletter />
       )}

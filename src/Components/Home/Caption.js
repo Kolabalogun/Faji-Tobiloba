@@ -15,10 +15,21 @@ const Caption = () => {
 
         <div className="flex flex-col mt-[-10px]">
           <h1 className="font-poppins font-bold lg:text-[2.6rem] md:text-[3.0rem] sm:text-[2.5rem] text-[2.3rem] text-white">
-            {homePageDetails && homePageDetails?.title}
+            <div
+              dangerouslySetInnerHTML={{
+                __html: homePageDetails && homePageDetails?.title,
+              }}
+            />
+            {/* {homePageDetails && homePageDetails?.title} */}
           </h1>
           <p className="py-1 text-[14px] text-white">
-            {homePageDetails && homePageDetails?.caption}
+            <div
+              dangerouslySetInnerHTML={{
+                __html: homePageDetails && homePageDetails?.caption,
+              }}
+            />
+
+            {/* {homePageDetails && homePageDetails?.caption} */}
           </p>
         </div>
 
@@ -37,7 +48,7 @@ const Caption = () => {
       </div>
 
       <div className="xmd:flex flex-col hidden w-full ml-[80px]">
-        <img src="fajj.png" className="h-[600px] w-[500px]" alt="" />
+        {/* <img src="fajj.png" className="h-[600px] w-[500px]" alt="" /> */}
       </div>
     </div>
   );

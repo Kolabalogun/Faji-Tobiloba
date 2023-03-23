@@ -36,7 +36,7 @@ const Navbar = () => {
   return (
     <div
       style={bg}
-      className="w-full h-[80px] z-100  fixed  top-0 bg-transparent transition-all xl:px-[30px] px-[10px] shadow-sm
+      className="w-full h-[80px] z-[1000]  fixed  top-0 bg-transparent transition-all xl:px-[30px] px-[10px] shadow-sm
 "
     >
       <div className="px-2 flex justify-between items-center w-full h-full">
@@ -107,6 +107,25 @@ const Navbar = () => {
             }}
           >
             Articles
+          </Link>
+          <Link
+            activeClass="active"
+            to="/project"
+            spy={true}
+            smooth={true}
+            offset={-80}
+            duration={500}
+            style={tcolo}
+            className={
+              windowHeight > 0
+                ? "font-rubik text-[14px] cursor-pointer  border-b-zinc-300 py-2 linked m-4 text-white"
+                : "font-rubik text-[14px] cursor-pointer  border-b-zinc-300 py-2 link m-4 text-white  "
+            }
+            onClick={() => {
+              navigate("/projects");
+            }}
+          >
+            Gallery1
           </Link>
           {/* <Link
             activeClass="active"

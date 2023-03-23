@@ -134,7 +134,9 @@ const MyStory = () => {
           userId: user.uid,
           dateId: dateId,
         });
+        setloader(false);
         toast.success("Story updated");
+        getMyStoryDetails();
       } catch (err) {
         console.log(err);
       }
