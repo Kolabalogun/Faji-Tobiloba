@@ -6,14 +6,14 @@ const Caption = () => {
   const { homePageDetails } = useGlobalContext();
 
   return (
-    <div className="h-[80vh] pt-[80px] grid xmd:grid-cols-2 grid-cols-1 md:justify-center sm:justify-center  items-center xl:px-[140px] md:px-[80px] sm:px-[80px] px-[20px]">
-      <div className="flex flex-col w-full flex-wrap ">
+    <div className="h-[95vh]  flex flex-col px-10 justify-center  ">
+      <div className="flex flex-col  ">
         <div className="flex items-center">
           <img src="logoSc.png" className="h-[90px]" alt="" />
           <img src="su.png" className="h-[110px]" alt="" />
         </div>
 
-        <div className="flex flex-col mt-[-10px]">
+        <div className="flex flex-col ">
           <h1 className="font-poppins font-bold lg:text-[2.6rem] md:text-[3.0rem] sm:text-[2.5rem] text-[2.3rem] text-white">
             <div
               dangerouslySetInnerHTML={{
@@ -47,9 +47,9 @@ const Caption = () => {
         </div>
       </div>
 
-      <div className="xmd:flex flex-col hidden w-full ml-[80px]">
+      {/* <div className="xmd:flex flex-col hidden w-full ml-[80px]">
         <img src="fajj.png" className="h-[600px] w-[500px]" alt="" />
-      </div>
+      </div> */}
     </div>
   );
 };
