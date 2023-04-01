@@ -9,8 +9,8 @@ const Caption = () => {
     <div className="h-[95vh]  flex flex-col px-10 justify-center  ">
       <div className="flex flex-col  ">
         <div className="flex items-center">
-          <img src="logoSc.png" className="h-[90px]" alt="" />
-          <img src="su.png" className="h-[110px]" alt="" />
+          <img src="logoSc.png" className="h-[80px]" alt="" />
+          <img src="su.png" className="h-[100px]" alt="" />
         </div>
 
         <div className="flex flex-col ">
@@ -35,12 +35,12 @@ const Caption = () => {
 
         <div className="flex my-2">
           <Link to="/contact">
-            <button className="py-[0.825rem] px-[2.025rem]  transition-colors duration-200 delay-100 border-blue-800 border font-[600] ">
+            <button className="py-[0.825rem] px-[2.025rem]  transition-colors duration-200 delay-100 border-blue-800 border font-[600] text-sm ">
               Contact me
             </button>
           </Link>
           <Link to="/about">
-            <button className="py-[0.825rem] px-[2.025rem] transition-colors duration-200 delay-100  border-blue-800 border-[1px] font-[600] bg-transparent mx-2  hover:bg-blue-800 text-white hover:text-white">
+            <button className="py-[0.825rem] px-[2.025rem] transition-colors duration-200 delay-100  border-blue-800 border-[1px] font-[600] bg-transparent mx-2  hover:bg-blue-800 text-white hover:text-white text-sm ">
               My Story
             </button>
           </Link>

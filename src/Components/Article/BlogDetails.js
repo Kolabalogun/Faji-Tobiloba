@@ -50,7 +50,7 @@ const BlogDetails = () => {
               >
                 <Navbar />
 
-                <h1 className="text-white font-poppins z-10 bg-transparent text-[50px] lg:px-[100px]  px-[20px]  text-5xl font-semibold mb-2">
+                <h1 className="text-white font-poppins z-10 bg-transparent text-[50px] lg:px-[100px]  px-[20px] text-2xl text-center  md:text-5xl font-semibold mb-2">
                   {article?.title}
                 </h1>
 
