@@ -29,7 +29,7 @@ const Home = () => {
             <>
               <Hero />
               <Note />
-              {/* <Footer /> */}
+              <Footer />
               <ScrolltoTop />
             </>
           )}
