@@ -20,29 +20,32 @@ const Pages = () => {
 
   const location = useLocation();
   return (
-    <AnimatePresence wait>
-      <Routes key={location.pathname} location={location}>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+    // <AnimatePresence wait>
+    // <Routes key={location.pathname} location={location}>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
 
-        <Route path="/projects" element={<Project />} />
-        <Route path="/articles" element={<Articles />} />
-        <Route path="/article/:id" element={<BlogDetails />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/gallery" element={<Gallery />} />
+      <Route path="/projects" element={<Project />} />
+      <Route path="/articles" element={<Articles />} />
+      <Route path="/article/:id" element={<BlogDetails />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/gallery" element={<Gallery />} />
 
-        <Route path="*" element={<NotFound />} />
+      <Route path="*" element={<NotFound />} />
 
-        <Route path="/auth" element={<Login />} />
+      <Route path="/auth" element={<Login />} />
 
-        {user && (
-          <>
-            <Route path="/admin" element={<Admin />} />
-            <Route path="/admin/updateArticle/:id" element={<Admin />} />
-          </>
-        )}
-      </Routes>
-    </AnimatePresence>
+      {user && (
+        <>
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/admin/updateArticle/:id" element={<Admin />} />
+        </>
+      )}
+    </Routes>
+
+    // </Routes>
+    // {/* </AnimatePresence> */}
   );
 };
 
