@@ -1,7 +1,7 @@
 {
   "name": "faji-tobiloba",
   "version": "0.1.0",
-  "homepage": ".",
+  "homepage": "https://www.thefajitobiloba.com/",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
