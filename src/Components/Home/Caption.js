@@ -51,16 +51,14 @@ const Caption = () => {
         <img src="fajj.png" className="h-[600px] w-[500px]" alt="" />
       </div> */}
 
-      <div className="absolute bottom-8 right-9">
+      <div className="absolute hidden xl:flex bottom-8 right-9">
         <img src="gears/gear (1).svg" alt="gear" className="h-52 w-52" />
       </div>
-      {/* <div className="absolute top-16 right-[50%]">
-        <img src="gears/gear.svg" alt="gear" className="h-32 w-h-32" />
-      </div> */}
-      <div className="absolute bottom-16 right-[40%]">
+
+      <div className="absolute hidden xl:flex  bottom-16 right-[40%]">
         <img src="gears/gg.svg" alt="gear" className="h-80 w-h-80" />
       </div>
-      <div className="absolute top-20 right-11">
+      <div className="absolute hidden xl:flex top-20 right-11">
         <img
           src="gears/gears-lubricant.svg"
           alt="gear"

@@ -266,6 +266,23 @@ const Navbar = ({ galleryBg }) => {
             style={tcolo}
             className="border-b-2 font-rubik border-zinc-300 w-full cursor-pointer"
             onClick={() => {
+              navigate("/gallery");
+            }}
+          >
+            <li className="border-b-2 font-rubik text-black border-zinc-300 w-full cursor-pointer">
+              Gallery
+            </li>
+          </Link>
+          <Link
+            activeClass="active"
+            to="/contact"
+            spy={true}
+            smooth={true}
+            offset={-80}
+            duration={500}
+            style={tcolo}
+            className="border-b-2 font-rubik border-zinc-300 w-full cursor-pointer"
+            onClick={() => {
               navigate("/contact");
             }}
           >
