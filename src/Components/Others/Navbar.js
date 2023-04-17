@@ -37,7 +37,7 @@ const Navbar = ({ galleryBg }) => {
     <div
       className={`w-full h-[80px] z-[1000]  fixed ${
         windowHeight > 0 ? "bg-white" : "bg-transparent"
-      } top-0 bg-transparent transition-all xl:px-[30px] px-[10px] shadow-sm ${
+      } top-0 bg-transparent transition-all md:px-[50px] xl:px-[120px] px-[10px] shadow-sm ${
         galleryBg && "bg-[#0d1727]"
       }`}
     >

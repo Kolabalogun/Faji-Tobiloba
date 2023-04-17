@@ -143,6 +143,7 @@ const NewArticle = ({ handleState }) => {
       try {
         await updateDoc(doc(db, "Articles", id), {
           ...form,
+          description: editorRefArticleDescription.current.getContent(),
           timestamp: serverTimestamp(),
           author: user.displayName,
           userId: user.uid,

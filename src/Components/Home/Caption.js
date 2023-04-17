@@ -6,7 +6,7 @@ const Caption = () => {
   const { homePageDetails } = useGlobalContext();
 
   return (
-    <div className="h-[95vh]  flex flex-col px-10 justify-center  ">
+    <div className="h-[95vh]  flex flex-col px-10 xl:px-[120px] md:px-[50px] justify-center  ">
       <div className="flex flex-col  ">
         <div className="flex items-center">
           <img src="logoSc.png" className="h-[80px]" alt="" />

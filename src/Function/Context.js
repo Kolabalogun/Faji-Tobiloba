@@ -319,6 +319,8 @@ const AppProvider = ({ children }) => {
   const [newsletter, setnewsletter] = useState(localStorage.getItem("email"));
   const [showNewsletter, setshowNewsletter] = useState(false);
 
+  console.log(newsletter);
+
   useEffect(() => {
     const timeout = setTimeout(() => {
       if (!newsletter) {

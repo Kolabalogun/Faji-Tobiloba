@@ -30,16 +30,16 @@ const Blog = () => {
 
           <div className="border">
             <div className=" sm:p-[50px] p-[10px] py-[50px]">
-              <div className="text-gray-700 text-[12px] mb-[5px] font-rubik uppercase ">
+              <div className="text-gray-700 text-[12px] mb-[5px] font-rubik uppercase flex-row ">
                 {Articles.length > 0 && (
                   <span>
                     Posted on {article.timestamp?.toDate().toDateString()}
                   </span>
                 )}
                 &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-                <span className="hidden sm:flex">
-                  <span className="text-medium-gray ">{article?.author}</span>
-                </span>
+                {/* <span className="hidden sm:inline "> */}
+                <span className="text-medium-gray ">{article?.author}</span>
+                {/* </span> */}
               </div>
 
               <a
@@ -50,10 +50,9 @@ const Blog = () => {
               </a>
 
               <div
-                className="mt-4 text-[12px] font-rubik
-                 "
+                className="mt-4 text-[12px] font-rubik"
                 dangerouslySetInnerHTML={{
-                  __html: `${article?.description.substring(0, 150)}...`,
+                  __html: `${article?.description.substring(0, 250)}...`,
                 }}
               />
 

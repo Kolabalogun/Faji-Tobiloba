@@ -46,7 +46,7 @@ const Home = () => {
 
     if (
       editorRefAboutDesription.current.getContent().length > 1 &&
-      editorRefCaption.getContent().length > 1
+      editorRefCaption.current.getContent().length > 1
     ) {
       if (title) {
         try {
@@ -65,7 +65,7 @@ const Home = () => {
       } else {
         return toast.error("All fields must be filled");
       }
-      navigate("/");
+      // navigate("/");
     } else {
       return toast.error("All fields must be filled");
     }
