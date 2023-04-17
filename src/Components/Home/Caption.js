@@ -6,7 +6,7 @@ const Caption = () => {
   const { homePageDetails } = useGlobalContext();
 
   return (
-    <div className="h-[95vh]  flex flex-col px-10 xl:px-[120px] md:px-[50px] justify-center  ">
+    <div className="h-[95vh]  flex flex-col relative px-10 xl:px-[120px] md:px-[50px] justify-center  ">
       <div className="flex flex-col  ">
         <div className="flex items-center">
           <img src="logoSc.png" className="h-[80px]" alt="" />
@@ -50,6 +50,23 @@ const Caption = () => {
       {/* <div className="xmd:flex flex-col hidden w-full ml-[80px]">
         <img src="fajj.png" className="h-[600px] w-[500px]" alt="" />
       </div> */}
+
+      <div className="absolute bottom-8 right-9">
+        <img src="gears/gear (1).svg" alt="gear" className="h-52 w-52" />
+      </div>
+      {/* <div className="absolute top-16 right-[50%]">
+        <img src="gears/gear.svg" alt="gear" className="h-32 w-h-32" />
+      </div> */}
+      <div className="absolute bottom-16 right-[40%]">
+        <img src="gears/gg.svg" alt="gear" className="h-80 w-h-80" />
+      </div>
+      <div className="absolute top-20 right-11">
+        <img
+          src="gears/gears-lubricant.svg"
+          alt="gear"
+          className="h-96 w-h-96"
+        />
+      </div>
     </div>
   );
 };

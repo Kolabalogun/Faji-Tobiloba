@@ -40,9 +40,9 @@ export const Admin = () => {
 
         {pageState === "story" ? (
           <MyStory />
-        ) : pageState === "project" ? (
-          <Project />
-        ) : pageState === "quote" ? (
+        ) : // ) : pageState === "project" ? (
+        //   <Project />
+        pageState === "quote" ? (
           <Quote />
         ) : pageState === "article" ? (
           <Articles />

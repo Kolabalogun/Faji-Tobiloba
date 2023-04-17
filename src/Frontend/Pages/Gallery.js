@@ -5,10 +5,10 @@ import Footer from "../../Components/Others/Footer";
 const Gallery = () => {
   const images = [
     {
-      src: "DSC_0042.jpg",
+      src: "faji (1).jpg",
     },
     {
-      src: "faji (1).jpg",
+      src: "DSC_0042.jpg",
     },
     {
       src: "faji (2).jpg",
@@ -22,9 +22,9 @@ const Gallery = () => {
     {
       src: "faji (5).jpg",
     },
-    {
-      src: "faji (6).jpg",
-    },
+    // {
+    //   src: "faji (6).jpg",
+    // },
     {
       src: "faji (7).jpg",
     },
@@ -259,6 +259,8 @@ const Gallery = () => {
 
   const handleClick = (index) => {
     if (expandedImage) {
+      setExpandedImage("");
+    } else if (expandedImage === 0) {
       setExpandedImage("");
     } else {
       setExpandedImage(index);
