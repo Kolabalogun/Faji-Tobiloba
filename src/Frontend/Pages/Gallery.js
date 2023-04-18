@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../../Components/Others/Navbar";
 import Footer from "../../Components/Others/Footer";
+import AnimatedPage from "../../Utils/AnimatedPage";
 
 const Gallery = () => {
   const images = [
@@ -268,7 +269,7 @@ const Gallery = () => {
   };
 
   return (
-    <div>
+    <AnimatedPage>
       <div>
         <Navbar galleryBg={true} />
       </div>
@@ -289,7 +290,7 @@ const Gallery = () => {
       <div>
         <Footer galleryBg={true} />
       </div>
-    </div>
+    </AnimatedPage>
   );
 };
 
