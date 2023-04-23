@@ -55,7 +55,7 @@ const Caption = () => {
         <img src="gears/gear (1).svg" alt="gear" className="h-52 w-52" />
       </div>
 
-      <div className="absolute hidden xl:flex  bottom-12 right-[40%]">
+      <div className="absolute hidden xl:flex  bottom-12 right-[35%]">
         <img src="gears/gg.svg" alt="gear" className="h-64 w-h-64" />
       </div>
       <div className="absolute hidden xl:flex top-20 right-11">
