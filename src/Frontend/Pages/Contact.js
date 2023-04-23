@@ -21,7 +21,7 @@ const initialState = {
 const Contact = () => {
   const {
     setloader,
-    user,
+
     showNewsletter,
     notification,
     notificationF,
