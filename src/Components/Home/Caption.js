@@ -35,12 +35,12 @@ const Caption = () => {
 
         <div className="flex my-2">
           <Link to="/contact">
-            <button className="py-[0.825rem] px-[2.025rem]  transition-colors duration-200 delay-100 border-blue-800 border font-[600] text-sm ">
+            <button className="py-[0.825rem] px-[2.225rem]   transition-colors duration-200 delay-100 border-blue-800 border font-[600] text-[13px] sm:text-sm ">
               Contact me
             </button>
           </Link>
           <Link to="/about">
-            <button className="py-[0.825rem] px-[2.025rem] transition-colors duration-200 delay-100  border-blue-800 border-[1px] font-[600] bg-transparent mx-2  hover:bg-blue-800 text-white hover:text-white text-sm ">
+            <button className="py-[0.825rem] px-[2.225rem]  transition-colors duration-200 delay-100  border-blue-800 border-[1px] font-[600] bg-transparent mx-2  hover:bg-blue-800 text-white hover:text-white text-[13px] sm:text-sm  ">
               My Story
             </button>
           </Link>
