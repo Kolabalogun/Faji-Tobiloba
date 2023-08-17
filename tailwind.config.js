@@ -4,8 +4,6 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        rubik: ["Rubik", "sans-serif"],
-        rufina: ["Rufina", "serif"],
         poppins: ["Poppins", "san-serif"],
       },
       colors: {
