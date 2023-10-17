@@ -11,7 +11,8 @@ const Note = () => {
     >
       {homePageDetails && (
         <div
-          className="font-poppins text-black text-[12px]"
+          style={{ fontSize: 14 }}
+          className="font-poppins text-black"
           dangerouslySetInnerHTML={{
             __html: homePageDetails?.aboutDescription,
           }}
