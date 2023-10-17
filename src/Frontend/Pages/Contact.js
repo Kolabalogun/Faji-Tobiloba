@@ -51,7 +51,6 @@ const Contact = () => {
       try {
         await addDoc(collection(db, "Messages"), {
           ...form,
-
           timestamp: serverTimestamp(),
         });
         await addDoc(collection(db, "Newsletter"), {
